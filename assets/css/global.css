@@ -3,7 +3,7 @@ body {
 }
 
 .section {
-  min-height: 900px;
+  min-height: 100vh;
 }
 
 .flex-wrapper {
@@ -19,6 +19,14 @@ body {
   text-align: center;
 }
 
+.row {
+  width: 100%;
+}
+
 .justify-content-center {
   justify-content: center;
+}
+
+#copyright {
+  padding: 2em;
 }
