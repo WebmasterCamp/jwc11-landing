@@ -1,8 +1,15 @@
 #intro {
-  background: pink;
+  color: #fff;
+  padding-top: 8em;
 }
 
 #main-sponsors {
+  margin-top: 6em;
   display: flex;
   justify-content: center;
+}
+
+#main-button {
+  color: #fff;
+  background: #e1a34e;
 }
