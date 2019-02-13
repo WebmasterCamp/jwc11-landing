@@ -1,6 +1,4 @@
 .timeline-item {
-  width: 100px;
+  width: 180px;
   margin: 0 20px;
-  height: 100px;
-  background: pink;
 }
