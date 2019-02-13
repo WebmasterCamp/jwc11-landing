@@ -1,0 +1,8 @@
+#intro {
+  background: pink;
+}
+
+#main-sponsors {
+  display: flex;
+  justify-content: center;
+}

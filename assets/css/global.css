@@ -1,4 +1,24 @@
 body {
   margin: 0;
-  padding: 0;
+}
+
+.section {
+  min-height: 900px;
+}
+
+.flex-wrapper {
+  display: flex;
+}
+
+.left-side,
+.right-side {
+  width: 50%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.justify-content-center {
+  justify-content: center;
 }
