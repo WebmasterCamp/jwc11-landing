@@ -1,7 +1,14 @@
 .sponsor-item {
   margin: 5px 15px;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  background: gray;
+  min-width: 100px;
+  max-width: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  display: inline-block;
+}
+
+.sponsor-item > img {
+  width: 100%;
+  height: 100%;
 }
