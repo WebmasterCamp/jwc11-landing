@@ -1,7 +1,10 @@
 body {
   margin: 0;
-  background-color: #223442;
+  background-color:#37417A;
   font-family: 'Pridi', serif;
+  color: white;
+  padding: 0 15px;
+  font-size: 20px;
 }
 
 /* Typography */
@@ -9,30 +12,34 @@ h1,
 h2,
 h3,
 h4 {
+  letter-spacing: 0.02em;
   margin-block-start: 0.2em;
   margin-block-end: 0.2em;
 }
 
 h1 {
   font-size: 54px;
-  letter-spacing: 0.02em;
+  font-weight: normal;
 }
 
 h2 {
   font-size: 40px;
-  letter-spacing: 0.02em;
+  font-weight: normal;
 }
 
 h3 {
   font-size: 32px;
-  letter-spacing: 0.02em;
+  font-weight: normal;
 }
 
 h4 {
   font-size: 24px;
   font-weight: 300;
   line-height: 48px;
-  letter-spacing: 0.01em;
+}
+
+a, button {
+  cursor: pointer;
 }
 
 .button {
