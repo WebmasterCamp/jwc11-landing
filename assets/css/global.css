@@ -126,3 +126,12 @@ a, button {
 .position-absolute {
   position: absolute;
 }
+
+.section-title {
+  background-size: cover;
+  background-image: url('/assets/images/paper_board.png');
+  width: 500px;
+  height: 150px;
+  text-align: center;
+  padding-top: 104px;
+}
