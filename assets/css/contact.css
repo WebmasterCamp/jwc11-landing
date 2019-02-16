@@ -1,6 +1,13 @@
 .contact-widget {
   width: 400px;
   min-height: 450px;
-  margin: 2em;
+  margin: 1em;
   background-color: #dd0;
+}
+
+@media screen and (max-width: 576px) {
+  .contact-widget {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
