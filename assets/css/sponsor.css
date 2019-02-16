@@ -1,3 +1,12 @@
+.sponsor-list {
+  list-style: none;
+  padding: 0;
+}
+
+.sponsor-list > li {
+  display: inline-block;
+}
+
 .sponsor-item {
   margin: 5px 15px;
   border-radius: 50%;
