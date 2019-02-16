@@ -135,3 +135,26 @@ a, button {
   text-align: center;
   padding-top: 104px;
 }
+
+/* style on mobile size */
+@media screen and (max-width: 576px) {
+  .mobile-fullwidth {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+
+  .section-title {
+    width: 310px;
+    height: 100px;
+    padding-top: 57px;
+  }
+
+  .mx-mobile-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
