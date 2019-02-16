@@ -65,6 +65,7 @@ a, button {
 
 .flex-wrapper {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .left-side,
