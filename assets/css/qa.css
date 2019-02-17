@@ -10,7 +10,7 @@ ol.question-list {
 }
 
 li.question-item {
-  padding: 0 20px 25px;
+  padding: 0 20px;
   border-bottom: 1px solid #F2F2F2;
 }
 
@@ -20,11 +20,14 @@ li.question-item:last-child {
 
 .question-item > .question-text {
   padding-top: 20px;
+  padding-bottom: 20px;
   padding-left: 10px;
   display: inline-flex;
   width: 95%;
   justify-content: space-between;
   align-items: flex-start;
+  color: white;
+  font-size: inherit;
 }
 
 @media screen and (max-width: 576px) {
