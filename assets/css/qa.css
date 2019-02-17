@@ -1,0 +1,89 @@
+ol.question-list {
+  width: 800px;
+  margin: auto;
+  background-color: #523036;
+  border-radius: 16px;
+  list-style-position: inside;
+  padding: 0;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2), inset 0px 3px 0px #694C4F;
+  max-width: 100%;
+}
+
+li.question-item {
+  padding: 0 20px 25px;
+  border-bottom: 1px solid #F2F2F2;
+}
+
+li.question-item:last-child {
+  border-bottom: none;
+}
+
+.question-item > .question-text {
+  padding-top: 20px;
+  padding-left: 10px;
+  display: inline-flex;
+  width: 95%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 576px) {
+  .question-item > .question-text {
+    width: 89%;
+  }
+}
+
+.collapsible {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.collapse-answer {
+  padding: 0 25px;
+
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+
+/* angle icon that can vertical flip */
+.angle-down {
+  position: relative;
+  min-width: 33px;
+  min-height: 30px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.angle-down.active {
+  transform: rotate(180deg)
+}
+
+.angle-down:before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 3px;
+  transform: rotate(45deg);
+  border-radius: 16px;
+  background: white;
+  position: absolute;
+  top: 14px;
+  left: 0;
+}
+
+.angle-down:after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 3px;
+  transform: rotate(-45deg);
+  position: absolute;
+  border-radius: 16px;
+  background: white;
+  top: 14px;
+  right: 0;
+}
