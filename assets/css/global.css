@@ -1,7 +1,10 @@
 body {
   margin: 0;
-  background-color: #223442;
+  background-color:#37417A;
   font-family: 'Pridi', serif;
+  color: white;
+  padding: 0 15px;
+  font-size: 20px;
 }
 
 /* Typography */
@@ -9,30 +12,34 @@ h1,
 h2,
 h3,
 h4 {
+  letter-spacing: 0.02em;
   margin-block-start: 0.2em;
   margin-block-end: 0.2em;
 }
 
 h1 {
   font-size: 54px;
-  letter-spacing: 0.02em;
+  font-weight: normal;
 }
 
 h2 {
   font-size: 40px;
-  letter-spacing: 0.02em;
+  font-weight: normal;
 }
 
 h3 {
   font-size: 32px;
-  letter-spacing: 0.02em;
+  font-weight: normal;
 }
 
 h4 {
   font-size: 24px;
   font-weight: 300;
   line-height: 48px;
-  letter-spacing: 0.01em;
+}
+
+a, button {
+  cursor: pointer;
 }
 
 .button {
@@ -58,6 +65,7 @@ h4 {
 
 .flex-wrapper {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .left-side,
@@ -78,5 +86,79 @@ h4 {
 }
 
 #copyright {
-  padding: 2em;
+  padding: 1.5em 0;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
+/* spacing */
+.mt-0 {
+  margin-top: 0;
+}
+
+.mt-1 {
+  margin-top: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+.mt-4 {
+  margin-top: 3rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.section-title {
+  background-size: cover;
+  background-image: url('/assets/images/paper_board.png');
+  width: 500px;
+  height: 150px;
+  text-align: center;
+  padding-top: 104px;
+}
+
+/* style on mobile size */
+@media screen and (max-width: 576px) {
+  .mobile-fullwidth {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+
+  .section-title {
+    width: 310px;
+    height: 100px;
+    padding-top: 57px;
+  }
+
+  .mx-mobile-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

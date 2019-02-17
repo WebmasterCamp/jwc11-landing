@@ -1,7 +1,13 @@
 #map-location {
-  width: 80%;
-  height: 40vh;
-  background-color: #c4c4c4;
-  border-radius: 25px;
+  width: 85%;
+  height: 450px;
   margin: 0 auto;
+  border: 20px solid black;
+  border-image: url(/assets/images/large_frame.png) 20;
+}
+
+@media screen and (max-width: 576px) {
+  #map-location {
+    height: 400px;
+  }
 }

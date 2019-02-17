@@ -1,12 +1,11 @@
 #intro {
   color: #fff;
-  padding-top: 8em;
+  padding-top: 4em;
 }
 
 #main-sponsors {
   margin-top: 6em;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 #main-button {
