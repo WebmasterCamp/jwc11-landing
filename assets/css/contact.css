@@ -1,8 +1,14 @@
 .contact-widget {
   width: 400px;
-  min-height: 450px;
+  height: 500px;
   margin: 1em;
-  background-color: #dd0;
+  background: white;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.contact-widget.twitter {
+  overflow-y: scroll;
 }
 
 @media screen and (max-width: 576px) {
