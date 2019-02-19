@@ -162,3 +162,14 @@ a, button {
     margin-right: auto;
   }
 }
+
+/* style on tablet or bigger */
+@media screen and (min-width: 576px) {
+  .tablet-hide {
+    display: none;
+  }
+}
+
+.image-fluid {
+  width: 100%;
+}
