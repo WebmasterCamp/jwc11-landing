@@ -1,10 +1,174 @@
 .major-cards {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  width: 100%;
 }
 .major-card {
   width: 262px;
-  height: 433px;
-  background: gray;
-  margin: 10px 35px;
+  height: 430px;
+  position: relative;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.carousel-container {
+  position: relative;
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+  height: 530px;
+}
+
+.button-prev {
+  position: absolute;
+  top: 285px;
+  left: 10px;
+}
+
+.button-next {
+  position: absolute;
+  top: 285px;
+  right: 10px;
+}
+
+@media screen and (max-width: 576px) {
+  .major-cards {
+    position: absolute;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transition: transform 1s;
+    background: pink;
+    height: 1000px;
+    min-width: 100px;
+  }
+  
+  .major-card > div {
+    width: 100%;
+  }
+  
+  .major-card {
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    position: absolute;
+    width: 225px;
+    height: 390px;
+    transition: transform 1s;
+  }
+
+  .major-card.is-1 {
+    transform: rotateY(0deg) translateZ(250px);
+    -webkit-transform: rotateY(0deg) translateZ(250px);
+    -moz-transform: rotateY(0deg) translateZ(250px);
+    -o-transform: rotateY(0deg) translateZ(250px);
+  }
+  
+  .major-card.is-2 {
+    transform: rotateY(75deg) translateZ(170px);
+    -webkit-transform: rotateY(75deg) translateZ(170px);
+    -moz-transform: rotateY(75deg) translateZ(170px);
+    -o-transform: rotateY(75deg) translateZ(170px);
+  }
+
+  .major-card.is-3 {
+    transform: rotateY(180deg) translateZ(100px);
+    -webkit-transform: rotateY(180deg) translateZ(100px);
+    -moz-transform: rotateY(180deg) translateZ(100px);
+    -o-transform: rotateY(180deg) translateZ(100px);
+  }
+  
+  .major-card.is-4 {
+    transform: rotateY(-75deg) translateZ(170px);
+    -webkit-transform: rotateY(-75deg) translateZ(170px);
+    -moz-transform: rotateY(-75deg) translateZ(170px);
+    -o-transform: rotateY(-75deg) translateZ(170px);
+  }
+
+}
+
+
+
+/* show content inside card */
+
+.side.front > .content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  bottom: 33px;
+}
+
+.side > .content a, .card-front > .content a:active {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 576px) {
+  .side.front > .content {
+    bottom: 20px;
+  }
+}
+
+
+@media screen and (min-width: 992px) {
+  .side.front > .content {
+    bottom: 43px;
+  }
+}
+
+.side.back > .content {
+  position: absolute;
+  top: 75px;
+  padding: 0 25px;
+}
+
+
+/* flip a card */
+.side.front {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.flip-card {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+
+.major-card.active > .flip-card {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+}
+
+.side {
+  position: absolute;
+}
+
+
+.side.back {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+}
+
+/* aura  */
+.major-card.is-1:hover img, .major-card.is-1.active img {
+  box-shadow: 0px 0px 30px #BF8D10;
+}
+
+.major-card.is-2:hover img, .major-card.is-2.active img {
+  box-shadow: 0px 0px 30px #D56394;
+}
+
+.major-card.is-3:hover img, .major-card.is-3.active img {
+  box-shadow: 0px 0px 30px #73A34D;
+}
+
+.major-card.is-4:hover img, .major-card.is-4.active img {
+  box-shadow: 0px 0px 30px #4BABB9;
 }
