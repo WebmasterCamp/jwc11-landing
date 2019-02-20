@@ -36,10 +36,10 @@ setTimeout(function() {
 var current = 0;
 
 var positions = {
-  front: 'rotateY(0deg) translateZ(250px)',
-  right: 'rotateY(75deg) translateZ(170px)',
-  back: 'rotateY(180deg) translateZ(100px)',
-  left: 'rotateY(-75deg) translateZ(170px)'
+  front: 'rotateY(1deg) translateZ(250px)',
+  right: 'rotateY(77deg) translateZ(149px)',
+  back: 'rotateY(0deg) translateZ(100px)',
+  left: 'rotateY(-77deg) translateZ(140px)'
 }
 
 function carousel(prevButton, nextButton) {
@@ -56,6 +56,11 @@ function carousel(prevButton, nextButton) {
   function changeStyle () {
     cards.map((each, index) => {
       each.style.transform = positionList[index]
+      if (positions.front === positionList[index]) {
+        each.style.zIndex = '10'
+      } else {
+        each.style.zIndex = null
+      }
     })
   }
 
@@ -75,6 +80,7 @@ function carousel(prevButton, nextButton) {
   }
 
   this.init = function () {
+    document.querySelector('.major-card.is-1').style.zIndex = '10'
     prevElement = document.querySelector(prevButton)
     nextElement = document.querySelector(nextButton)
     prevElement.addEventListener('click', prev)
@@ -90,21 +96,21 @@ branchCarousel.init()
 function getViewport() {
   var viewPortWidth
   var viewPortHeight
- 
+
   // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
   if (typeof window.innerWidth != 'undefined') {
     viewPortWidth = window.innerWidth,
     viewPortHeight = window.innerHeight
   }
- 
- // IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+
+  // IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
   else if (typeof document.documentElement != 'undefined'
   && typeof document.documentElement.clientWidth !=
   'undefined' && document.documentElement.clientWidth != 0) {
-     viewPortWidth = document.documentElement.clientWidth,
-     viewPortHeight = document.documentElement.clientHeight
+    viewPortWidth = document.documentElement.clientWidth,
+    viewPortHeight = document.documentElement.clientHeight
   }
- 
+
   // older versions of IE
   else {
     viewPortWidth = document.getElementsByTagName('body')[0].clientWidth,

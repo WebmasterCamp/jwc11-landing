@@ -2,42 +2,55 @@
   display: flex;
   justify-content: space-around;
   width: 100%;
+  flex-wrap: wrap;
+  z-index: 15;
 }
 .major-card {
   width: 262px;
   height: 430px;
   position: relative;
   transition: box-shadow 0.3s ease-in-out;
+  -webkit-transition: box-shadow 0.3s ease-in-out;
+  -moz-transition: box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out;
 }
 
 .carousel-container {
   position: relative;
   perspective: 1000px;
   -webkit-perspective: 1000px;
-  height: 530px;
 }
 
 .button-prev {
   position: absolute;
   top: 285px;
   left: 10px;
+  z-index: 20;
+  -webkit-appearance: none;
 }
 
 .button-next {
   position: absolute;
   top: 285px;
   right: 10px;
+  z-index: 20;
+  -webkit-appearance: none;
 }
 
 @media screen and (max-width: 576px) {
+  .carousel-container {
+    height: 530px;
+  }
+
   .major-cards {
     position: absolute;
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     transition: transform 1s;
-    background: pink;
-    height: 1000px;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -o-transition: transform 1s;
     min-width: 100px;
   }
   
@@ -50,9 +63,12 @@
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     position: absolute;
-    width: 225px;
-    height: 390px;
+    width: 210px;
+    height: 345px;
     transition: transform 1s;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -o-transition: transform 1s;
   }
 
   .major-card.is-1 {
@@ -63,24 +79,24 @@
   }
   
   .major-card.is-2 {
-    transform: rotateY(75deg) translateZ(170px);
-    -webkit-transform: rotateY(75deg) translateZ(170px);
-    -moz-transform: rotateY(75deg) translateZ(170px);
-    -o-transform: rotateY(75deg) translateZ(170px);
+    transform: rotateY(77deg) translateZ(149px);
+    -webkit-transform: rotateY(77deg) translateZ(149px);
+    -moz-transform: rotateY(77deg) translateZ(149px);
+    -o-transform: rotateY(77deg) translateZ(149px);
   }
 
   .major-card.is-3 {
-    transform: rotateY(180deg) translateZ(100px);
-    -webkit-transform: rotateY(180deg) translateZ(100px);
-    -moz-transform: rotateY(180deg) translateZ(100px);
-    -o-transform: rotateY(180deg) translateZ(100px);
+    transform: rotateY(0deg) translateZ(100px);
+    -webkit-transform: rotateY(0deg) translateZ(100px);
+    -moz-transform: rotateY(0deg) translateZ(100px);
+    -o-transform: rotateY(0deg) translateZ(100px);
   }
   
   .major-card.is-4 {
-    transform: rotateY(-75deg) translateZ(170px);
-    -webkit-transform: rotateY(-75deg) translateZ(170px);
-    -moz-transform: rotateY(-75deg) translateZ(170px);
-    -o-transform: rotateY(-75deg) translateZ(170px);
+    transform: rotateY(-77deg) translateZ(140px);
+    -webkit-transform: rotateY(-77deg) translateZ(140px);
+    -moz-transform: rotateY(-77deg) translateZ(140px);
+    -o-transform: rotateY(-77deg) translateZ(140px);
   }
 
 }
@@ -94,7 +110,11 @@
   left: 0;
   right: 0;
   text-align: center;
-  bottom: 33px;
+  bottom: 5%;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
 }
 
 .side > .content a, .card-front > .content a:active {
@@ -105,14 +125,7 @@
 
 @media screen and (min-width: 576px) {
   .side.front > .content {
-    bottom: 20px;
-  }
-}
-
-
-@media screen and (min-width: 992px) {
-  .side.front > .content {
-    bottom: 43px;
+    bottom: 7%;
   }
 }
 
@@ -126,7 +139,12 @@
 /* flip a card */
 .side.front {
   cursor: pointer;
-  overflow: hidden;
+  height: 100%;
+  transition: visibility 0s;
+  -webkit-transition: visibility 0s;
+  -moz-transition: visibility 0s;
+  -o-transition: visibility 0s;
+  
 }
 
 .flip-card {
@@ -147,6 +165,9 @@
 
 .side {
   position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
 }
 
 
@@ -171,4 +192,12 @@
 
 .major-card.is-4:hover img, .major-card.is-4.active img {
   box-shadow: 0px 0px 30px #4BABB9;
+}
+
+/* .major-card.active .side.front > .content{
+  visibility: hidden;
+} */
+
+.rounded {
+  border-radius: 12px;
 }
