@@ -212,6 +212,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 113px;
+  cursor: pointer;
 }
 
 .major-card.is-1 .side.back .view-question-button {
