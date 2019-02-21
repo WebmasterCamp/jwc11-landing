@@ -36,8 +36,8 @@ setTimeout(function() {
 var current = 0;
 
 var positions = {
-  front: 'rotateY(1deg) translateZ(250px)',
-  right: 'rotateY(77deg) translateZ(149px)',
+  front: 'rotateY(0deg) translateZ(250px)',
+  right: 'rotateY(77deg) translateZ(140px)',
   back: 'rotateY(0deg) translateZ(100px)',
   left: 'rotateY(-77deg) translateZ(140px)'
 }
