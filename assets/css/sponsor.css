@@ -21,3 +21,13 @@
   width: 100%;
   height: 100%;
 }
+
+.sponsor-card {
+  background-image: url('/assets/images/rentangle-board.png');
+  background-position: top center;
+  margin: 3rem -15px;
+  width: calc(100% + 30px);
+  min-height: 996px;
+  padding-top: 20px;
+  background-repeat: no-repeat;
+}
