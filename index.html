@@ -115,20 +115,107 @@
     <section id="major" class="section">
       <div class="container">
         <h2 class="section-title mx-auto">เลือกสาขา</h2>
-        <div class="major-cards mt-4">
-          <div class="major-card">
-            1
+        <div class="carousel-container">
+          <div class="major-cards mt-4">
+            <div class="major-card is-1 mt-4" data-branch="content">
+              <div class="flip-card">
+                <div class="side front">
+                  <img class="image-fluid rounded" src="/assets/images/content.png" alt="">
+                  <div class="content">
+                    <div>
+                      สมัครแล้ว xx คน
+                    </div>
+                    <small>ดูรายละเอียดสาขานี้ &gt;</small>
+                  </div>
+                </div>
+                <div class="side back">
+                  <img class="image-fluid rounded" src="/assets/images/content_back.png" alt="">
+                  <div class="content">
+                    <p>
+                      เหมาะสำหรับน้อง ๆ ที่ชอบคิดอย่างเป็นระบบ และจดจ่อกับการทำงาน
+                      ได้เป็นอย่างดี รังสรรค์ให้
+                      โค้ดต่าง ๆ บนหน้าจอให้ ออกมาเป็น เว็บไซต์ที่ใช้ งานได้จริงนะโว้ยยยย
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="major-card is-2 mt-4" data-branch="design">
+              <div class="flip-card">
+                <div class="side front">
+                  <img class="image-fluid rounded" src="/assets/images/design.png" alt="">
+                  <div class="content">
+                    <div>
+                      สมัครแล้ว xx คน
+                    </div>
+                    <small>ดูรายละเอียดสาขานี้ &gt;</small>
+                  </div>
+                </div>
+                <div class="side back">
+                  <img class="image-fluid rounded" src="/assets/images/design_back.png" alt="">
+                  <div class="content">
+                    <p>
+                      เหมาะสำหรับน้อง ๆ ที่ชอบคิดอย่างเป็นระบบ และจดจ่อกับการทำงาน
+                      ได้เป็นอย่างดี รังสรรค์ให้
+                      โค้ดต่าง ๆ บนหน้าจอให้ ออกมาเป็น เว็บไซต์ที่ใช้ งานได้จริงนะโว้ยยยย
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="major-card is-3 mt-4" data-branch="marketing">
+              <div class="flip-card">
+                <div class="side front">
+                  <img class="image-fluid rounded" src="/assets/images/marketing.png" alt="">
+                  <div class="content">
+                    <div>
+                      สมัครแล้ว xx คน
+                    </div>
+                    <small>ดูรายละเอียดสาขานี้ &gt;</small>
+                  </div>
+                </div>
+                <div class="side back">
+                  <img class="image-fluid rounded" src="/assets/images/marketing_back.png" alt="">
+                  <div class="content">
+                    <p>
+                      เหมาะสำหรับน้อง ๆ ที่ชอบคิดอย่างเป็นระบบ และจดจ่อกับการทำงาน
+                      ได้เป็นอย่างดี รังสรรค์ให้
+                      โค้ดต่าง ๆ บนหน้าจอให้ ออกมาเป็น เว็บไซต์ที่ใช้ งานได้จริงนะโว้ยยยย
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="major-card is-4 mt-4" data-branch="programming">
+              <div class="flip-card">
+                <div class="side front">
+                  <img class="image-fluid rounded" src="/assets/images/programming.png" alt="">
+                  <div class="content">
+                    <div>
+                      สมัครแล้ว xx คน
+                    </div>
+                    <small>ดูรายละเอียดสาขานี้ &gt;</small>
+                  </div>
+                </div>
+                <div class="side back">
+                  <img class="image-fluid rounded" src="/assets/images/programming_back.png" alt="">
+                  <div class="content">
+                    <p>
+                      เหมาะสำหรับน้อง ๆ ที่ชอบคิดอย่างเป็นระบบ และจดจ่อกับการทำงาน
+                      ได้เป็นอย่างดี รังสรรค์ให้
+                      โค้ดต่าง ๆ บนหน้าจอให้ ออกมาเป็น เว็บไซต์ที่ใช้ งานได้จริงนะโว้ยยยย
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-front">
+              </div>
+            </div>
           </div>
-          <div class="major-card">
-            2
-          </div>
-          <div class="major-card">
-            3
-          </div>
-          <div class="major-card">
-            4
-          </div>
+          <button id="major-left" class="button-prev tablet-hide">prev</button>
+          <button id="major-right" class="button-next tablet-hide">next</button>
         </div>
+
         <div class="text-center mt-4">
           <a class="button">สมัครเข้าโรงเรียน</a>
         </div>
@@ -140,30 +227,30 @@
         <div class="row text-center">
           <h2 class="section-title mx-auto">ตารางเวลา</h2>
         </div>
-        <div class="flex-wrapper justify-content-center mt-4">
+        <div class="flex-wrapper justify-content-around mt-4">
           <div class="timeline-item text-center">
-            <img src="/assets/images/timeline.png" alt="timeline" />
+            <img class="image-fluid" src="/assets/images/timeline.png" alt="timeline" />
             <p>
               รับสมัคร<br />
               0-31 มีนาคม
             </p>
           </div>
           <div class="timeline-item text-center">
-            <img src="/assets/images/timeline.png" alt="timeline" />
+            <img class="image-fluid" src="/assets/images/timeline.png" alt="timeline" />
             <p>
               ประกาศผล<br />
               0-31 มีนาคม
             </p>
           </div>
           <div class="timeline-item text-center">
-            <img src="/assets/images/timeline.png" alt="timeline" />
+            <img class="image-fluid" src="/assets/images/timeline.png" alt="timeline" />
             <p>
               ยืนยันสิทธิ์<br />
               0-31 มีนาคม
             </p>
           </div>
           <div class="timeline-item text-center">
-            <img src="/assets/images/timeline.png" alt="timeline" />
+            <img class="image-fluid" src="/assets/images/timeline.png" alt="timeline" />
             <p>
               วันค่าย<br />
               0-31 มีนาคม
@@ -204,11 +291,11 @@
       <div class="container">
         <h2 class="section-title mx-auto">ถาม - ตอบ</h2>
         <div class="mt-4">
-          <ol class="question-list">
+          <ul class="question-list">
             <li class="question-item">
               <button class="question-text collapsible">
-                <span>ค่ายนี้รับสมัครกี่คน?</span>
                 <i class="angle-down"></i>
+                <span>ค่ายนี้รับสมัครกี่คน?</span>
               </button>
               <div class="collapse-answer">
                 <p class="mt-0">
@@ -218,8 +305,8 @@
             </li>
             <li class="question-item">
               <button class="question-text collapsible">
-                <span>ใครสามารถสมัครค่ายนี้ได้บ้าง?</span>
                 <i class="angle-down"></i>
+                <span>ใครสามารถสมัครค่ายนี้ได้บ้าง?</span>
               </button>
               <div class="collapse-answer">
                 <p class="mt-0">
@@ -229,8 +316,8 @@
             </li>
             <li class="question-item">
               <button class="question-text collapsible">
-                <span>อยากสมัครสาขาโปรแกรมมิ่งต้องมีพื้นฐานแค่ไหน?</span>
                 <i class="angle-down"></i>
+                <span>อยากสมัครสาขาโปรแกรมมิ่งต้องมีพื้นฐานแค่ไหน?</span>
               </button>
               <div class="collapse-answer">
                 <p class="mt-0">
@@ -240,8 +327,8 @@
             </li>
             <li class="question-item">
               <button class="question-text collapsible">
-                <span>หากมีข้อสงสัยเพิ่มเติม สามารถสอบถามได้ที่ไหนบ้าง?</span>
                 <i class="angle-down"></i>
+                <span>หากมีข้อสงสัยเพิ่มเติม สามารถสอบถามได้ที่ไหนบ้าง?</span>
               </button>
               <div class="collapse-answer">
                 <p class="mt-0">
@@ -249,7 +336,7 @@
                 </p>
               </div>
             </li>
-          </ol>
+          </ul>
         </div>
       </div>
     </section>

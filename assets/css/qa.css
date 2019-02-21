@@ -1,17 +1,16 @@
-ol.question-list {
+.question-list {
   width: 800px;
   margin: auto;
-  background-color: #523036;
-  border-radius: 16px;
-  list-style-position: inside;
+  border-radius: 20px;
+  overflow: hidden;
+  list-style: none;
   padding: 0;
-  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2), inset 0px 3px 0px #694C4F;
-  max-width: 100%;
+  max-width: 90%;
+  background-color: #E0E0E0;
 }
 
 li.question-item {
-  padding: 0 20px;
-  border-bottom: 1px solid #F2F2F2;
+  border-bottom: 2px solid #F2F2F2;
 }
 
 li.question-item:last-child {
@@ -19,21 +18,16 @@ li.question-item:last-child {
 }
 
 .question-item > .question-text {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 10px;
-  display: inline-flex;
-  width: 95%;
-  justify-content: space-between;
-  align-items: flex-start;
-  color: white;
+  padding: 20px;
+  background-color: #302D2D;
+  display: block;
+  width: 100%;
+  text-align: left;
+  color: #0B667E;
   font-size: inherit;
-}
-
-@media screen and (max-width: 576px) {
-  .question-item > .question-text {
-    width: 89%;
-  }
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
 }
 
 .collapsible {
@@ -45,20 +39,24 @@ li.question-item:last-child {
 
 .collapse-answer {
   padding: 0 25px;
-
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  color: #0B667E;
 }
 
 
 /* angle icon that can vertical flip */
 .angle-down {
   position: relative;
-  min-width: 33px;
-  min-height: 30px;
+  min-width: 40px;
+  min-height: 40px;
   display: inline-block;
   transition: all 0.3s ease;
+  border-radius: 20px;
+  background-color: #0B667E;
+  vertical-align: middle;
+  margin-right: 10px;
 }
 
 .angle-down.active {
@@ -68,25 +66,25 @@ li.question-item:last-child {
 .angle-down:before {
   content: '';
   display: inline-block;
-  width: 20px;
+  width: 12px;
   height: 3px;
   transform: rotate(45deg);
   border-radius: 16px;
   background: white;
   position: absolute;
-  top: 14px;
-  left: 0;
+  top: 20px;
+  left: 10px;
 }
 
 .angle-down:after {
   content: '';
   display: inline-block;
-  width: 20px;
+  width: 12px;
   height: 3px;
   transform: rotate(-45deg);
   position: absolute;
   border-radius: 16px;
   background: white;
-  top: 14px;
-  right: 0;
+  top: 20px;
+  right: 10px;
 }

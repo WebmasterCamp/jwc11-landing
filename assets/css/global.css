@@ -5,6 +5,7 @@ body {
   color: white;
   padding: 0 15px;
   font-size: 20px;
+  overflow-x: hidden;
 }
 
 /* Typography */
@@ -85,6 +86,10 @@ a, button {
   justify-content: center;
 }
 
+.justify-content-around {
+  justify-content: space-around;
+}
+
 #copyright {
   padding: 1.5em 0;
 }
@@ -161,4 +166,15 @@ a, button {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+/* style on tablet or bigger */
+@media screen and (min-width: 576px) {
+  .tablet-hide {
+    display: none;
+  }
+}
+
+.image-fluid {
+  width: 100%;
 }
