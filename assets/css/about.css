@@ -97,3 +97,30 @@
     right: 25px;
   }
 }
+
+
+@media screen and (min-width: 576px) and (max-width: 1200px) {
+  .skull {
+    width: 200px;
+    top: 140px;
+  }
+
+  .candle:nth-child(1) {
+    top: 80px;
+    left: 55px;
+  }
+
+  .candle:nth-child(4) {
+    top: 80px;
+    right: 55px;
+  }
+
+  .candle:nth-child(2) {
+    top: 245px;
+  }
+
+  .candle:nth-child(3) {
+    top: 245px;
+  }
+
+}

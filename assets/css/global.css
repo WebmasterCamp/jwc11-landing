@@ -168,6 +168,18 @@ a, button {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .tablet-fullwidth {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .mx-tablet-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /* style on tablet or bigger */
 @media screen and (min-width: 576px) {
   .tablet-hide {

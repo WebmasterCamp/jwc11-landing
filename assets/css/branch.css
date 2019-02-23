@@ -23,18 +23,76 @@
 
 .button-prev {
   position: absolute;
-  top: 285px;
-  left: 10px;
+  top: 260px;
+  left: -7px;
   z-index: 20;
   -webkit-appearance: none;
+  min-width: 30px;
+  min-height: 30px;
+  max-width: 30px;
+  max-height: 30px;
+  border: none;
+  background-color: #BF8D10;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+.button-prev:before {
+  content: '';
+  border: 1px solid white;
+  transform: rotate(-45deg);
+  position: absolute;
+  width: 12px;
+  left: 6px;
+  top: 9px;
+}
+
+.button-prev:after {
+  content: '';
+  border: 1px solid white;
+  transform: rotate(45deg);
+  position: absolute;
+  width: 12px;
+  left: 6px;
+  top: 18px;
 }
 
 .button-next {
   position: absolute;
-  top: 285px;
-  right: 10px;
+  top: 260px;
+  right: -7px;
   z-index: 20;
   -webkit-appearance: none;
+  min-width: 30px;
+  min-height: 30px;
+  max-width: 30px;
+  max-height: 30px;
+  border: none;
+  background-color: #BF8D10;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+.button-next:before {
+  content: '';
+  border: 1px solid white;
+  transform: rotate(45deg);
+  position: absolute;
+  width: 12px;
+  right: 6px;
+  top: 9px;
+}
+
+.button-next:after {
+  content: '';
+  border: 1px solid white;
+  transform: rotate(-45deg);
+  position: absolute;
+  width: 12px;
+  right: 6px;
+  top: 18px;
 }
 
 @media screen and (max-width: 576px) {
@@ -79,10 +137,10 @@
   }
   
   .major-card.is-2 {
-    transform: rotateY(77deg) translateZ(149px);
-    -webkit-transform: rotateY(77deg) translateZ(149px);
-    -moz-transform: rotateY(77deg) translateZ(149px);
-    -o-transform: rotateY(77deg) translateZ(149px);
+    transform: rotateY(77deg) translateZ(140px);
+    -webkit-transform: rotateY(77deg) translateZ(140px);
+    -moz-transform: rotateY(77deg) translateZ(140px);
+    -o-transform: rotateY(77deg) translateZ(140px);
   }
 
   .major-card.is-3 {
@@ -195,9 +253,9 @@
   box-shadow: 0px 0px 30px #4BABB9;
 }
 
-/* .major-card.active .side.front > .content{
+.major-card.active .side.front > .content{
   visibility: hidden;
-} */
+}
 
 .rounded {
   border-radius: 12px;
