@@ -24,7 +24,7 @@ for (let index = 0; index < collapsibleList.length; index++) {
       content.style.maxHeight = content.scrollHeight + "px";
       this.style.background = '#E0E0E0';
       hideOtherCollapse(this)
-    } 
+    }
   });
 }
 
@@ -43,16 +43,16 @@ var positions = {
 }
 
 function carousel(prevButton, nextButton) {
-  
+
   let cards = Array.from(document.querySelectorAll('.major-card'))
-  
+
   let positionList = [
     positions.front,
     positions.right,
     positions.back,
     positions.left
   ]
-  
+
   function changeStyle () {
     cards.map((each, index) => {
       each.style.transform = positionList[index]
@@ -66,15 +66,15 @@ function carousel(prevButton, nextButton) {
 
   function next () {
     current = (current + 1) % 4
-    current = current === -1 ? 4 : current
+    current = current === -1 ? 3 : current
     positionList.splice(0, 0, positionList.pop())
     changeStyle()
   }
 
-  
+
   function prev () {
     current = (current - 1) % 4
-    current = current === -1 ? 4 : current
+    current = current === -1 ? 3 : current
     positionList.push(positionList.shift())
     changeStyle()
   }
