@@ -10,9 +10,3 @@
 .contact-widget.twitter {
   overflow-y: scroll;
 }
-
-@media screen and (max-width: 576px) {
-  .contact-widget.facebook {
-    height: 450px;
-  }
-}

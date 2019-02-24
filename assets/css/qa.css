@@ -11,6 +11,7 @@
 
 li.question-item {
   border-bottom: 2px solid #F2F2F2;
+  color: #52ABB7;
 }
 
 li.question-item:last-child {
@@ -23,7 +24,7 @@ li.question-item:last-child {
   display: block;
   width: 100%;
   text-align: left;
-  color: #0B667E;
+  color: inherit;
   font-size: inherit;
   transition: background-color 0.3s ease;
   display: flex;
@@ -42,7 +43,7 @@ li.question-item:last-child {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  color: #0B667E;
+  color: #0B667E;  
 }
 
 
@@ -54,13 +55,14 @@ li.question-item:last-child {
   display: inline-block;
   transition: all 0.3s ease;
   border-radius: 20px;
-  background-color: #0B667E;
+  background-color: #52ABB7;
   vertical-align: middle;
   margin-right: 10px;
 }
 
 .angle-down.active {
-  transform: rotate(180deg)
+  transform: rotate(180deg);
+  background-color: #0B667E;
 }
 
 .angle-down:before {

@@ -175,6 +175,10 @@
   -o-transition: all 0.5s ease;
 }
 
+.side.front > .content small {
+  opacity: 0.75;
+}
+
 .side > .content a, .card-front > .content a:active {
   text-decoration: none;
   color: white;
@@ -237,6 +241,10 @@
 }
 
 /* aura  */
+.major-card img {
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.07, 0.66);
+}
+
 .major-card.is-1:hover img, .major-card.is-1.active img {
   box-shadow: 0px 0px 30px #BF8D10;
 }
