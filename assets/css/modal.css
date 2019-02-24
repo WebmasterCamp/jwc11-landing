@@ -16,7 +16,6 @@
 .modal-body {
   width: 793px;
   margin: 2.5rem auto 0;
-  background-image: url(/assets/images/modal-background-large.png);
   height: 490px;
   padding: 0px;
   background-repeat: no-repeat;
@@ -38,8 +37,6 @@
 }
 
 .modal-body-inside .back-button {
-  border: 1px solid #52ABB7;
-  color: #52ABB7;
   border-radius: 25px;
   padding: 10px 1rem;
   background: transparent;
@@ -54,15 +51,84 @@
 
 .modal-body-inside .back-button:hover {
   color: white;
+  
+}
+
+.modal-body.content {
+  background-image: url('/assets/images/modal-horizon-content.png');
+}
+
+.modal-body.design {
+  background-image: url('/assets/images/modal-horizon-design.png');
+}
+
+.modal-body.marketing {
+  background-image: url('/assets/images/modal-horizon-marketing.png');
+}
+
+.modal-body.programming {
+  background-image: url('/assets/images/modal-horizon-programming.png');
+}
+
+
+.modal-body.design .back-button {
+  border: 1px solid #C59316;
+  color: #C59316;
+}
+
+.modal-body.marketing .back-button:hover {
+  background: #C59316;
+}
+
+.modal-body.design .back-button {
+  border: 1px solid #DD6A9B;
+  color: #DD6A9B;
+}
+
+.modal-body.marketing .back-button:hover {
+  background: #DD6A9B;
+}
+
+.modal-body.marketing .back-button {
+  border: 1px solid #7DA756;
+  color: #7DA756;
+}
+
+.modal-body.marketing .back-button:hover {
+  background: #7DA756;
+}
+
+.modal-body.programming .back-button {
+  border: 1px solid #52ABB7;
+  color: #52ABB7;
+}
+
+.modal-body.programming .back-button:hover {
   background: #52ABB7;
 }
 
+
 @media screen and (max-width: 578px) {
   .modal-body {
-    background-image: url('/assets/images/modal-background.png');
     width: 300px;
     height: 500px;
     background-size: cover;
+  }
+
+  .modal-body.content {
+    background-image: url('/assets/images/modal-horizon-content.png');
+  }
+  
+  .modal-body.design {
+    background-image: url('/assets/images/modal-horizon-design.png');
+  }
+  
+  .modal-body.marketing {
+    background-image: url('/assets/images/modal-horizon-marketing.png');
+  }
+  
+  .modal-body.programming {
+    background-image: url('/assets/images/modal-horizon-programming.png');
   }
 
   .modal-body-inside {

@@ -176,20 +176,28 @@ document.querySelector('.navicon-button').addEventListener('click', function () 
 
 // major branch
 var viewQuestionButtons = document.querySelectorAll('.view-question-button')
-var modal = document.getElementById('modal-question')
+var modals = document.querySelectorAll('.modal-container')
 
 for (let index = 0; index < viewQuestionButtons.length; index++) {
   viewQuestionButtons[index].addEventListener('click', function () {
-    modal.classList.toggle('show')
+    let target = this.getAttribute('data-target')
+    document.getElementById(target).classList.toggle('show')
   })
 }
 
-document.getElementById('close-modal').addEventListener('click', function () {
-  modal.classList.toggle('show')
-})
+var closeModalButtons = document.querySelectorAll('.close-modal')
 
-modal.addEventListener('click', function () {
-  if (!event.target.closest('.modal-body')) {
-    modal.classList.toggle('show')
-  }
-})
+for (let index = 0; index < closeModalButtons.length; index++) {
+  closeModalButtons[index].addEventListener('click', function () {
+    let target = this.getAttribute('data-target')
+    document.getElementById(target).classList.remove('show')
+  })
+}
+
+for (let index = 0; index < modals.length; index++) {
+  modals[index].addEventListener('click', function () {
+    if (!event.target.closest('.modal-body')) {
+      this.classList.toggle('show')
+    }
+  })
+}
