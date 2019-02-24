@@ -1,6 +1,9 @@
 body {
   margin: 0;
-  background-color:#37417A;
+  background-color: #37417a;
+  background-image: url(../images/background.png);
+  background-size: cover;
+  background-position: center;
   font-family: 'Pridi', serif;
   color: white;
   padding: 0 15px;
@@ -39,7 +42,8 @@ h4 {
   line-height: 48px;
 }
 
-a, button {
+a,
+button {
   cursor: pointer;
 }
 
