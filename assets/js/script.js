@@ -160,3 +160,10 @@ document.addEventListener('click', function (event) {
     })
   }
 })
+
+
+// toggle button
+document.querySelector('.navicon-button').addEventListener('click', function () {
+  this.classList.toggle('open')
+  document.querySelector('.nav-list').classList.toggle('show')
+})
