@@ -201,7 +201,7 @@
                       เช่น บ่นในทวิตและเขียนแคปชั่นในไอจี เป็นต้น
                     </p>
                   </div>
-                  <button class="view-question-button" data-branch="content">ดูคำถามสาขา</button>
+                  <button class="view-question-button" data-target="modal-content">ดูคำถามสาขา</button>
                 </div>
               </div>
             </div>
@@ -226,7 +226,7 @@
                       รับพิจารณาพิเศษสำหรับผู้ที่มีงานอดิเรกแอบวาดรูปในห้องเรียน
                     </p>
                   </div>
-                  <button class="view-question-button" data-branch="design">ดูคำถามสาขา</button>
+                  <button class="view-question-button" data-target="modal-design">ดูคำถามสาขา</button>
                 </div>
               </div>
             </div>
@@ -249,7 +249,7 @@
                       เหมาะกับผู้ที่สนใจในการหาเงินจากช่องทางต่าง ๆ
                     </p>
                   </div>
-                  <button class="view-question-button" data-branch="marketing">ดูคำถามสาขา</button>
+                  <button class="view-question-button" data-target="modal-marketing">ดูคำถามสาขา</button>
                 </div>
               </div>
             </div>
@@ -273,7 +273,7 @@
                       ไม่ว่าภาษาไหน ๆ จะ html,css, js หรือนอกเหนือจากนี้
                     </p>
                   </div>
-                  <button class="view-question-button" data-branch="programming">ดูคำถามสาขา</button>
+                  <button class="view-question-button" data-target="modal-programming">ดูคำถามสาขา</button>
                 </div>
               </div>
               <div class="card-front">
@@ -550,15 +550,51 @@
       Copyright &copy; 2019, Young Webmaster Camp, in association with Thai
       Webmaster Association. All right reserved.
     </footer>
-    <div class="modal-container" id="modal-question">
-      <div class="modal-body">
+    <div class="modal-container" id="modal-content">
+      <div class="modal-body content">
         <div class="modal-body-inside">
           <div class="modal-content" id="major-question">
             1. นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส<br />
             2. นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส<br />
             3. นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส
           </div>
-          <button id="close-modal" class="back-button">ย้อนกลับ</button>
+          <button data-target="modal-content" class="back-button close-modal">ย้อนกลับ</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-container" id="modal-design">
+      <div class="modal-body design">
+        <div class="modal-body-inside">
+          <div class="modal-content" id="major-question">
+            1. นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส<br />
+            2. นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส<br />
+            3. นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส
+          </div>
+          <button data-target="modal-design" class="back-button close-modal">ย้อนกลับ</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-container" id="modal-marketing">
+      <div class="modal-body marketing">
+        <div class="modal-body-inside">
+          <div class="modal-content" id="major-question">
+            1. นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส<br />
+            2. นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส<br />
+            3. นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส
+          </div>
+          <button data-target="modal-marketing" class="back-button close-modal">ย้อนกลับ</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-container" id="modal-programming">
+      <div class="modal-body programming">
+        <div class="modal-body-inside">
+          <div class="modal-content" id="major-question">
+            1. นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส<br />
+            2. นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส<br />
+            3. นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส
+          </div>
+          <button data-target="modal-programming" class="back-button close-modal">ย้อนกลับ</button>
         </div>
       </div>
     </div>
