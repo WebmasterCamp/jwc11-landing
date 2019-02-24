@@ -1,0 +1,121 @@
+#navbar {
+  background-color: #222542;
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+  /* padding: 20px 0; */
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.image-fluid {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.navicon-button {
+  display: inline-flex;
+  position: relative;
+  padding: 1.25rem 1rem;
+  transition: 0.25s;
+  cursor: pointer;
+  user-select: none;
+  align-self: center;
+}
+
+.navicon {
+  position: relative;
+  width: 2.5rem;
+  height: .3125rem;
+  background: #fff;
+  transition: 0.5s;
+  border-radius: 2.5rem;
+}
+
+.navicon:before, .navicon:after {
+  display: block;
+  content: "";
+  height: .3125rem;
+  width: 2.5rem;
+  background: #fff;
+  position: absolute;
+  z-index: -1;
+  transition: 0.5s 0.25s;
+  border-radius: 1rem;
+
+}
+
+.navicon:before {
+  top: 0.625rem;  
+}
+
+.navicon:after {
+  top: -0.625rem;
+}
+
+.open .navicon {
+  background: transparent;
+}
+
+.open .navicon:before {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.open .navicon:after {
+  top: 0;
+  transform: rotate(45deg); 
+}
+
+/* . ~ .nav-list {
+  
+} */
+
+@media screen and (min-width: 576px) {
+  .nav-list {
+    align-self: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+}
+
+@media screen and (max-width: 576px) {
+  .nav-list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+
+  .nav-list.show {
+    max-height: auto;
+    overflow: visible;
+  }
+  
+  .nav-item {
+    background-color: #2C345E;
+    display: flex;
+    min-height: 50px;
+  }
+
+}
