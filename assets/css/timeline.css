@@ -2,3 +2,11 @@
   width: 180px;
   margin: 0 50px;
 }
+
+@media screen and (max-width: 576px) {
+  .timeline-item {
+    flex: 0 0 40%;
+    width: 40%;
+    margin: 0;
+  }
+}

@@ -1,10 +1,294 @@
 .major-cards {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+  z-index: 15;
 }
 .major-card {
   width: 262px;
-  height: 433px;
-  background: gray;
-  margin: 10px 35px;
+  height: 430px;
+  position: relative;
+  transition: box-shadow 0.3s ease-in-out;
+  -webkit-transition: box-shadow 0.3s ease-in-out;
+  -moz-transition: box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out;
+}
+
+.carousel-container {
+  position: relative;
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+}
+
+.button-prev {
+  position: absolute;
+  top: 260px;
+  left: -7px;
+  z-index: 20;
+  -webkit-appearance: none;
+  min-width: 30px;
+  min-height: 30px;
+  max-width: 30px;
+  max-height: 30px;
+  border: none;
+  background-color: #BF8D10;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+.button-prev:before {
+  content: '';
+  border: 1px solid white;
+  transform: rotate(-45deg);
+  position: absolute;
+  width: 12px;
+  left: 6px;
+  top: 9px;
+}
+
+.button-prev:after {
+  content: '';
+  border: 1px solid white;
+  transform: rotate(45deg);
+  position: absolute;
+  width: 12px;
+  left: 6px;
+  top: 18px;
+}
+
+.button-next {
+  position: absolute;
+  top: 260px;
+  right: -7px;
+  z-index: 20;
+  -webkit-appearance: none;
+  min-width: 30px;
+  min-height: 30px;
+  max-width: 30px;
+  max-height: 30px;
+  border: none;
+  background-color: #BF8D10;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+.button-next:before {
+  content: '';
+  border: 1px solid white;
+  transform: rotate(45deg);
+  position: absolute;
+  width: 12px;
+  right: 6px;
+  top: 9px;
+}
+
+.button-next:after {
+  content: '';
+  border: 1px solid white;
+  transform: rotate(-45deg);
+  position: absolute;
+  width: 12px;
+  right: 6px;
+  top: 18px;
+}
+
+@media screen and (max-width: 576px) {
+  .carousel-container {
+    height: 530px;
+  }
+
+  .major-cards {
+    position: absolute;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transition: transform 1s;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -o-transition: transform 1s;
+    min-width: 100px;
+  }
+  
+  .major-card > div {
+    width: 100%;
+  }
+  
+  .major-card {
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    position: absolute;
+    width: 210px;
+    height: 345px;
+    transition: transform 1s;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -o-transition: transform 1s;
+  }
+
+  .major-card.is-1 {
+    transform: rotateY(0deg) translateZ(250px);
+    -webkit-transform: rotateY(0deg) translateZ(250px);
+    -moz-transform: rotateY(0deg) translateZ(250px);
+    -o-transform: rotateY(0deg) translateZ(250px);
+  }
+  
+  .major-card.is-2 {
+    transform: rotateY(77deg) translateZ(140px);
+    -webkit-transform: rotateY(77deg) translateZ(140px);
+    -moz-transform: rotateY(77deg) translateZ(140px);
+    -o-transform: rotateY(77deg) translateZ(140px);
+  }
+
+  .major-card.is-3 {
+    transform: rotateY(0deg) translateZ(100px);
+    -webkit-transform: rotateY(0deg) translateZ(100px);
+    -moz-transform: rotateY(0deg) translateZ(100px);
+    -o-transform: rotateY(0deg) translateZ(100px);
+  }
+  
+  .major-card.is-4 {
+    transform: rotateY(-77deg) translateZ(140px);
+    -webkit-transform: rotateY(-77deg) translateZ(140px);
+    -moz-transform: rotateY(-77deg) translateZ(140px);
+    -o-transform: rotateY(-77deg) translateZ(140px);
+  }
+
+}
+
+
+
+/* show content inside card */
+
+.side.front > .content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  bottom: 5%;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.side > .content a, .card-front > .content a:active {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 576px) {
+  .side.front > .content {
+    bottom: 7%;
+  }
+}
+
+.side.back > .content {
+  position: absolute;
+  top: 75px;
+  padding: 0 25px;
+}
+
+
+/* flip a card */
+.side.front {
+  cursor: pointer;
+  height: 100%;
+  transition: visibility 0s;
+  -webkit-transition: visibility 0s;
+  -moz-transition: visibility 0s;
+  -o-transition: visibility 0s;
+  
+}
+
+.flip-card {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+
+.major-card.active > .flip-card {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+}
+
+.side {
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+}
+
+
+.side.back {
+  font-size: 16px;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+}
+
+/* aura  */
+.major-card.is-1:hover img, .major-card.is-1.active img {
+  box-shadow: 0px 0px 30px #BF8D10;
+}
+
+.major-card.is-2:hover img, .major-card.is-2.active img {
+  box-shadow: 0px 0px 30px #D56394;
+}
+
+.major-card.is-3:hover img, .major-card.is-3.active img {
+  box-shadow: 0px 0px 30px #73A34D;
+}
+
+.major-card.is-4:hover img, .major-card.is-4.active img {
+  box-shadow: 0px 0px 30px #4BABB9;
+}
+
+.major-card.active .side.front > .content{
+  visibility: hidden;
+}
+
+.rounded {
+  border-radius: 12px;
+}
+
+.side.back .view-question-button {
+  background: transparent;
+  border-radius: 25px;
+  padding: 7px 15px;
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 113px;
+  cursor: pointer;
+}
+
+.major-card.is-1 .side.back .view-question-button {
+  color: #BF8D10;
+  border: 1px solid #BF8D10;
+}
+
+.major-card.is-2 .side.back .view-question-button {
+  color: #D56394;
+  border: 1px solid #D56394;
+}
+
+.major-card.is-3 .side.back .view-question-button {
+  color: #73A34D;
+  border: 1px solid #73A34D;
+}
+
+.major-card.is-4 .side.back .view-question-button {
+  color: #4BABB9;
+  border: 1px solid #4BABB9;
 }
