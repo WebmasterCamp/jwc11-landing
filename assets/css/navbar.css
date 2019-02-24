@@ -5,9 +5,7 @@
   width: 100vw;
   height: 50px;
   display: flex;
-  /* align-items: center;
-  justify-content: center; */
-  /* padding: 20px 0; */
+  z-index: 500;
 }
 
 .nav-list {
@@ -86,10 +84,6 @@
   top: 0;
   transform: rotate(45deg); 
 }
-
-/* . ~ .nav-list {
-  
-} */
 
 @media screen and (min-width: 576px) {
   .nav-list {
