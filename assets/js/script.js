@@ -172,3 +172,24 @@ document.querySelector('.navicon-button').addEventListener('click', function () 
   this.classList.toggle('open')
   document.querySelector('.nav-list').classList.toggle('show')
 })
+
+
+// major branch
+var viewQuestionButtons = document.querySelectorAll('.view-question-button')
+var modal = document.getElementById('modal-question')
+
+for (let index = 0; index < viewQuestionButtons.length; index++) {
+  viewQuestionButtons[index].addEventListener('click', function () {
+    modal.classList.toggle('show')
+  })
+}
+
+document.getElementById('close-modal').addEventListener('click', function () {
+  modal.classList.toggle('show')
+})
+
+modal.addEventListener('click', function () {
+  if (!event.target.closest('.modal-body')) {
+    modal.classList.toggle('show')
+  }
+})
