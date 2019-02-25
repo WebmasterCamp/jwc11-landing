@@ -1,6 +1,7 @@
 #navbar {
   background-color: #222542;
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
   width: 100vw;
   height: 50px;
