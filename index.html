@@ -5,17 +5,36 @@
     <title>Junior Webmaster Camp XI</title>
     <!-- Facebook Open Graph -->
     <meta property="og:url" content="https://jwc.in.th" />
-    <meta property="og:title" content="Junior Webmaster Camp XI" />
+    <meta property="og:title" content="Junior Webmaster Camp 11" />
+    <link href="https://fonts.googleapis.com/css?family=Pridi:200,300,400&amp;subset=thai" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/logo/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/logo/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/logo/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/logo/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/logo/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/logo/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/logo/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/logo/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/logo/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192"  href="/logo/android-icon-192x192.png" />
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/logo/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/logo/favicon-16x16.png" />
+    <link rel="manifest" href="/logo/manifest.json" />
+
     <meta
       property="og:description"
       content="JWC คือ ค่ายสำหรับเหล่าผู้กล้าวัยมัธยมปลาย ที่จะร่วมกันเดินทางเพื่อค้นหาความสามารถและพลังที่ซ่อนอยู่ในตัวของพวกเขา"
     />
     <meta
       property="og:image"
-      content="http://spaceth.co/wp-content/uploads/2018/04/jwcx_og.png"
+      content="https://jwcxi.netlify.com/images/og23021229.jpg"
     />
     <meta property="article:author" content="https://www.facebook.com/jwcth" />
 
+    <meta name="msapplication-TileColor" content="#326585" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#326585" />
     <meta
       name="description"
@@ -23,8 +42,13 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
-    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+    <meta
+      name="twitter:image:src"
+      content="https://jwcxi.netlify.com/images/og23021229.jpg"
+    />
+
+    <link rel="icon" type="image/png" href="/logo/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="/logo/favicon.ico" />
 
     <!-- Google Font -->
     <link
@@ -44,6 +68,8 @@
     <link rel="stylesheet" href="/assets/css/sponsor.css" />
     <link rel="stylesheet" href="/assets/css/timeline.css" />
     <link rel="stylesheet" href="/assets/css/footer.css" />
+    <link rel="stylesheet" href="/assets/css/navbar.css" />
+    <link rel="stylesheet" href="/assets/css/modal.css" />
 
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css"
@@ -63,6 +89,29 @@
   </head>
 
   <body>
+    <nav id="navbar">
+      <div class="tablet-hide full-height flex-wrapper">
+        <a class="navicon-button">
+          <div class="navicon"></div>
+        </a>
+      </div>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#about">รู้จักค่าย</a>
+        </li>
+        <li class="nav-item">
+          <a href="#major">สาขา</a>
+        </li>
+        <li class="nav-item">
+          <a href="#timeline">ระบะเวลา</a>
+        </li>
+        <li class="nav-item">
+          <a href="#faq">คำถามที่พบบ่อย</a>
+        </li>
+      </ul>
+    </nav>
+
+
     <section id="intro" class="section">
       <div class="container">
         <div class="text-center">
@@ -76,25 +125,25 @@
         </div>
       </div>
       <div id="main-sponsors" class="row">
-        <a href="https://www.dek-d.com" class="sponsor-item">
+        <a href="https://www.dek-d.com" target="_blank" class="sponsor-item">
           <img
             src="https://jwc.in.th//assets/img/sponsors/circle/association.svg"
             alt="dek-d"
           />
         </a>
-        <a href="https://www.dek-d.com" class="sponsor-item">
+        <a href="https://www.dek-d.com" target="_blank" class="sponsor-item">
           <img
             src="https://jwc.in.th//assets/img/sponsors/circle/it.png"
             alt="dek-d"
           />
         </a>
-        <a href="https://www.dek-d.com" class="sponsor-item">
+        <a href="https://www.dek-d.com" target="_blank" class="sponsor-item">
           <img
             src="https://jwc.in.th//assets/img/sponsors/circle/cpall.svg"
             alt="dek-d"
           />
         </a>
-        <a href="https://www.dek-d.com" class="sponsor-item">
+        <a href="https://www.dek-d.com" target="_blank" class="sponsor-item">
           <img
             src="https://jwc.in.th/assets/img/sponsors/circle/dek-d.svg"
             alt="dek-d"
@@ -103,7 +152,7 @@
       </div>
     </section>
 
-    <section id="what" class="section">
+    <section id="about" class="section">
       <div class="flex-wrapper container">
         <div class="left-side tablet-fullwidth">
           <h2 class="section-title mx-tablet-auto">JWC คืออะไร</h2>
@@ -147,7 +196,7 @@
                     <div>
                       สมัครแล้ว 0 คน
                     </div>
-                    <small>ดูรายละเอียดสาขานี้ &gt;</small>
+                    <small>ดูรายละเอียดสาขานี้</small>
                   </div>
                 </div>
                 <div class="side back">
@@ -163,7 +212,7 @@
                       บ่นในทวิตและเขียนแคปชั่นในไอจี เป็นต้น
                     </p>
                   </div>
-                  <button class="view-question-button">ดูคำถามสาขา</button>
+                  <button class="view-question-button" data-target="modal-content">ดูคำถามสาขา</button>
                 </div>
               </div>
             </div>
@@ -179,7 +228,7 @@
                     <div>
                       สมัครแล้ว 0 คน
                     </div>
-                    <small>ดูรายละเอียดสาขานี้ &gt;</small>
+                    <small>ดูรายละเอียดสาขานี้</small>
                   </div>
                 </div>
                 <div class="side back">
@@ -195,7 +244,7 @@
                       รับพิจารณาพิเศษสำหรับผู้ที่มีงานอดิเรกแอบวาดรูปในห้องเรียน
                     </p>
                   </div>
-                  <button class="view-question-button">ดูคำถามสาขา</button>
+                  <button class="view-question-button" data-target="modal-design">ดูคำถามสาขา</button>
                 </div>
               </div>
             </div>
@@ -211,7 +260,7 @@
                     <div>
                       สมัครแล้ว 0 คน
                     </div>
-                    <small>ดูรายละเอียดสาขานี้ &gt;</small>
+                    <small>ดูรายละเอียดสาขานี้</small>
                   </div>
                 </div>
                 <div class="side back">
@@ -226,7 +275,7 @@
                       เหมาะกับผู้ที่สนใจในการหาเงินจากช่องทางต่าง ๆ
                     </p>
                   </div>
-                  <button class="view-question-button">ดูคำถามสาขา</button>
+                  <button class="view-question-button" data-target="modal-marketing">ดูคำถามสาขา</button>
                 </div>
               </div>
             </div>
@@ -242,7 +291,7 @@
                     <div>
                       สมัครแล้ว 0 คน
                     </div>
-                    <small>ดูรายละเอียดสาขานี้ &gt;</small>
+                    <small>ดูรายละเอียดสาขานี้</small>
                   </div>
                 </div>
                 <div class="side back">
@@ -258,7 +307,7 @@
                       js หรือนอกเหนือจากนี้
                     </p>
                   </div>
-                  <button class="view-question-button">ดูคำถามสาขา</button>
+                  <button class="view-question-button" data-target="modal-programming">ดูคำถามสาขา</button>
                 </div>
               </div>
               <div class="card-front"></div>
@@ -269,7 +318,7 @@
         </div>
 
         <div class="text-center mt-4">
-          <a class="button">สมัครเข้าโรงเรียน</a>
+          <a href="https://registration.jwc.in.th" class="button">สมัครเข้าโรงเรียน</a>
         </div>
       </div>
     </section>
@@ -460,8 +509,8 @@
           data-autoplay="true"
           data-width="100%"
         >
-          <a href="1.jpg"><img src="http://s.fotorama.io/1.jpg"/></a>
-          <a href="2.jpg"><img src="http://s.fotorama.io/1.jpg"/></a>
+          <a href="1.jpg"><img src="https://s.fotorama.io/1.jpg"/></a>
+          <a href="2.jpg"><img src="https://s.fotorama.io/1.jpg"/></a>
         </div>
       </div>
     </section>
@@ -474,7 +523,7 @@
         <div class="row text-center mt-4 sponsor-card">
           <ul class="sponsor-list">
             <li>
-              <a href="https://www.dek-d.com" class="sponsor-item">
+              <a href="https://www.dek-d.com" target="_blank" class="sponsor-item">
                 <img
                   src="https://jwc.in.th//assets/img/sponsors/circle/association.svg"
                   alt="dek-d"
@@ -482,7 +531,7 @@
               </a>
             </li>
             <li>
-              <a href="https://www.dek-d.com" class="sponsor-item">
+              <a href="https://www.dek-d.com" target="_blank" class="sponsor-item">
                 <img
                   src="https://jwc.in.th//assets/img/sponsors/circle/it.png"
                   alt="dek-d"
@@ -490,7 +539,7 @@
               </a>
             </li>
             <li>
-              <a href="https://www.dek-d.com" class="sponsor-item">
+              <a href="https://www.dek-d.com" target="_blank" class="sponsor-item">
                 <img
                   src="https://jwc.in.th//assets/img/sponsors/circle/cpall.svg"
                   alt="dek-d"
@@ -498,7 +547,7 @@
               </a>
             </li>
             <li>
-              <a href="https://www.dek-d.com" class="sponsor-item">
+              <a href="https://www.dek-d.com" target="_blank" class="sponsor-item">
                 <img
                   src="https://jwc.in.th/assets/img/sponsors/circle/dek-d.svg"
                   alt="dek-d"
@@ -556,6 +605,54 @@
       Copyright &copy; 2019, Young Webmaster Camp, in association with Thai
       Webmaster Association. All right reserved.
     </footer>
+    <div class="modal-container" id="modal-content">
+      <div class="modal-body content">
+        <div class="modal-body-inside">
+          <div class="modal-content" id="major-question">
+            1. นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส<br />
+            2. นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส<br />
+            3. นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส
+          </div>
+          <button data-target="modal-content" class="back-button close-modal">ย้อนกลับ</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-container" id="modal-design">
+      <div class="modal-body design">
+        <div class="modal-body-inside">
+          <div class="modal-content" id="major-question">
+            1. นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส<br />
+            2. นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส<br />
+            3. นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส
+          </div>
+          <button data-target="modal-design" class="back-button close-modal">ย้อนกลับ</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-container" id="modal-marketing">
+      <div class="modal-body marketing">
+        <div class="modal-body-inside">
+          <div class="modal-content" id="major-question">
+            1. นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส<br />
+            2. นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส<br />
+            3. นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส
+          </div>
+          <button data-target="modal-marketing" class="back-button close-modal">ย้อนกลับ</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-container" id="modal-programming">
+      <div class="modal-body programming">
+        <div class="modal-body-inside">
+          <div class="modal-content" id="major-question">
+            1. นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส<br />
+            2. นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส<br />
+            3. นี่คือคำถามสาขานะจ๊ะ น้องคิดว่าน้องมีอะไรเจ๋งที่ทำให้พี่ต้องเลือกน้องเข้า มาในถ่ายนี้ด้วยล่ะ อิสอิส
+          </div>
+          <button data-target="modal-programming" class="back-button close-modal">ย้อนกลับ</button>
+        </div>
+      </div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
