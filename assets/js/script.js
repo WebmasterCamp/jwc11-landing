@@ -164,6 +164,14 @@ document.addEventListener('click', function (event) {
       each.classList.remove('active')
     })
   }
+
+  // handle click outside navbar
+  if (!event.target.closest('nav')) {
+    let navButton = document.querySelector('.navicon-button')
+    let navList = document.querySelector('.nav-list')
+    navButton.classList.remove('open')
+    navList.classList.remove('show')
+  }
 })
 
 
