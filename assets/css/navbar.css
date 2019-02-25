@@ -59,7 +59,7 @@
   background: #fff;
   position: absolute;
   z-index: -1;
-  transition: 0.5s 0.25s;
+  transition: 0.3s ;
   border-radius: 1rem;
 
 }
@@ -100,17 +100,25 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease;
+    height: 200px;
+    position: absolute;
+    top: 50px;
+    left: 0;
   }
 
   .nav-list.show {
-    max-height: auto;
-    overflow: visible;
+    max-height: 200px;
   }
   
   .nav-item {
     background-color: #2C345E;
     display: flex;
     min-height: 50px;
+  }
+
+  .nav-item a {
+    width: 100%;
+    text-align: center;
   }
 
 }
