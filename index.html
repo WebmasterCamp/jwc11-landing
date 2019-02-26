@@ -75,16 +75,17 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@11.0.2/dist/lazyload.min.js"></script>
     <script type="text/javascript">
       // automate redirect to https
-      if (
-        location.protocol != 'https:' &&
-        location.host.indexOf('localhost') === -1
-      ) {
-        location.href =
-          'https:' +
-          window.location.href.substring(window.location.protocol.length)
-      }
+      // if (
+      //   location.protocol != 'https:' &&
+      //   location.host.indexOf('localhost') === -1
+      // ) {
+      //   location.href =
+      //     'https:' +
+      //     window.location.href.substring(window.location.protocol.length)
+      // }
     </script>
   </head>
 
@@ -119,7 +120,7 @@
           <h2>Junior Webmaster Camp ๑๑</h2>
           <h1>“ ศึกศาสตรา ไขปัญหาวัยเรียน ”</h1>
           <h4>วันที่ ๖-๘ เมษายน ๒๕๖๒</h4>
-          <a class="button display-inline-block mt-3" id="main-button"
+          <a href="#about" class="button display-inline-block mt-3" id="main-button"
             >สำรวจโรงเรียน</a
           >
         </div>
@@ -170,11 +171,11 @@
         <div
           class="right-side tablet-fullwidth position-relative animation-side"
         >
-          <img src="/assets/images/candle.png" alt="candle" class="candle" />
-          <img src="/assets/images/candle.png" alt="candle" class="candle" />
-          <img src="/assets/images/candle.png" alt="candle" class="candle" />
-          <img src="/assets/images/candle.png" alt="candle" class="candle" />
-          <img src="/assets/images/skull.png" alt="skull" class="skull" />
+          <img data-src="/assets/images/candle.png" alt="candle" class="candle lazy" />
+          <img data-src="/assets/images/candle.png" alt="candle" class="candle lazy" />
+          <img data-src="/assets/images/candle.png" alt="candle" class="candle lazy" />
+          <img data-src="/assets/images/candle.png" alt="candle" class="candle lazy" />
+          <img data-src="/assets/images/skull.png" alt="skull" class="skull lazy" />
         </div>
       </div>
     </section>
@@ -188,8 +189,8 @@
               <div class="flip-card">
                 <div class="side front">
                   <img
-                    class="image-fluid rounded"
-                    src="/assets/images/content.png"
+                    class="image-fluid rounded lazy"
+                    data-src="/assets/images/content.png"
                     alt=""
                   />
                   <div class="content">
@@ -201,8 +202,8 @@
                 </div>
                 <div class="side back">
                   <img
-                    class="image-fluid rounded"
-                    src="/assets/images/content_back.png"
+                    class="image-fluid rounded lazy"
+                    data-src="/assets/images/content_back.png"
                     alt=""
                   />
                   <div class="content">
@@ -220,8 +221,8 @@
               <div class="flip-card">
                 <div class="side front">
                   <img
-                    class="image-fluid rounded"
-                    src="/assets/images/design.png"
+                    class="image-fluid rounded lazy"
+                    data-src="/assets/images/design.png"
                     alt=""
                   />
                   <div class="content">
@@ -233,8 +234,8 @@
                 </div>
                 <div class="side back">
                   <img
-                    class="image-fluid rounded"
-                    src="/assets/images/design_back.png"
+                    class="image-fluid rounded lazy"
+                    data-src="/assets/images/design_back.png"
                     alt=""
                   />
                   <div class="content">
@@ -244,7 +245,7 @@
                       รับพิจารณาพิเศษสำหรับผู้ที่มีงานอดิเรกแอบวาดรูปในห้องเรียน
                     </p>
                   </div>
-                  <button class="view-question-button" data-target="modal-design">ดูคำถามสาขา</button>
+                  <button name="view-question" class="view-question-button" data-target="modal-design">ดูคำถามสาขา</button>
                 </div>
               </div>
             </div>
@@ -252,8 +253,8 @@
               <div class="flip-card">
                 <div class="side front">
                   <img
-                    class="image-fluid rounded"
-                    src="/assets/images/marketing.png"
+                    class="image-fluid rounded lazy"
+                    data-src="/assets/images/marketing.png"
                     alt=""
                   />
                   <div class="content">
@@ -265,8 +266,8 @@
                 </div>
                 <div class="side back">
                   <img
-                    class="image-fluid rounded"
-                    src="/assets/images/marketing_back.png"
+                    class="image-fluid rounded lazy"
+                    data-src="/assets/images/marketing_back.png"
                     alt=""
                   />
                   <div class="content">
@@ -275,7 +276,7 @@
                       เหมาะกับผู้ที่สนใจในการหาเงินจากช่องทางต่าง ๆ
                     </p>
                   </div>
-                  <button class="view-question-button" data-target="modal-marketing">ดูคำถามสาขา</button>
+                  <button name="view-question" class="view-question-button" data-target="modal-marketing">ดูคำถามสาขา</button>
                 </div>
               </div>
             </div>
@@ -283,8 +284,8 @@
               <div class="flip-card">
                 <div class="side front">
                   <img
-                    class="image-fluid rounded"
-                    src="/assets/images/programming.png"
+                    class="image-fluid rounded lazy"
+                    data-src="/assets/images/programming.png"
                     alt=""
                   />
                   <div class="content">
@@ -296,8 +297,8 @@
                 </div>
                 <div class="side back">
                   <img
-                    class="image-fluid rounded"
-                    src="/assets/images/programming_back.png"
+                    class="image-fluid rounded lazy"
+                    data-src="/assets/images/programming_back.png"
                     alt=""
                   />
                   <div class="content">
@@ -307,7 +308,7 @@
                       js หรือนอกเหนือจากนี้
                     </p>
                   </div>
-                  <button class="view-question-button" data-target="modal-programming">ดูคำถามสาขา</button>
+                  <button name="view-question" class="view-question-button" data-target="modal-programming">ดูคำถามสาขา</button>
                 </div>
               </div>
               <div class="card-front"></div>
@@ -342,8 +343,8 @@
           </div>
           <div class="timeline-item text-center">
             <img
-              class="image-fluid"
-              src="/assets/images/timeline.png"
+              class="image-fluid lazy"
+              data-src="/assets/images/timeline.png"
               alt="timeline"
             />
             <p>
@@ -353,8 +354,8 @@
           </div>
           <div class="timeline-item text-center">
             <img
-              class="image-fluid"
-              src="/assets/images/timeline.png"
+              class="image-fluid lazy"
+              data-src="/assets/images/timeline.png"
               alt="timeline"
             />
             <p>
@@ -364,8 +365,8 @@
           </div>
           <div class="timeline-item text-center">
             <img
-              class="image-fluid"
-              src="/assets/images/timeline.png"
+              class="image-fluid lazy"
+              data-src="/assets/images/timeline.png"
               alt="timeline"
             />
             <p>
@@ -386,7 +387,8 @@
           </p>
           <div id="map-location">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.7421884103337!2d100.32253601534732!3d13.794409200019905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2938b7dca4d8f%3A0x18cb4e1c1854103a!2sFaculty+of+Information+and+Communication+Technology!5e0!3m2!1sen!2sth!4v1550372988188"
+              class="lazy"
+              data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.7421884103337!2d100.32253601534732!3d13.794409200019905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2938b7dca4d8f%3A0x18cb4e1c1854103a!2sFaculty+of+Information+and+Communication+Technology!5e0!3m2!1sen!2sth!4v1550372988188"
               width="100%"
               height="100%"
               frameborder="0"
@@ -665,6 +667,9 @@
       src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2&appId=2112662722101314&autoLogAppEvents=1"
     ></script>
     <script>
+      var lazyLoadInstance = new LazyLoad({
+        elements_selector: ".lazy"
+      });
       $(document).ready(function(){
         // Add smooth scrolling to all links
         $("a").on('click', function(event) {
