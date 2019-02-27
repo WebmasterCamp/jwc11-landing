@@ -44,7 +44,7 @@
 
 .navicon {
   position: relative;
-  width: 2.5rem;
+  width: 2rem;
   height: .3125rem;
   background: #fff;
   transition: 0.5s;
@@ -55,7 +55,7 @@
   display: block;
   content: "";
   height: .3125rem;
-  width: 2.5rem;
+  width: 2rem;
   background: #fff;
   position: absolute;
   z-index: -1;
