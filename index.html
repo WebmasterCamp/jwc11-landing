@@ -118,7 +118,7 @@
         <div class="text-center">
           <img class="logo" src="/logo/logo.png" alt="jwc11-logo" />
           <h2>Junior Webmaster Camp ๑๑</h2>
-          <h1>“ ศึกมนตรา แก้ปัญหาโรงเรียน ”</h1>
+          <h1>“ ศึกมนตรา<br class="break" /> แก้ปัญหาโรงเรียน ”</h1>
           <h4>วันที่ ๖-๘ เมษายน ๒๕๖๒</h4>
           <a href="#about" class="button display-inline-block mt-3" id="main-button"
             >สำรวจโรงเรียน</a
@@ -330,47 +330,50 @@
           <h2 class="section-title mx-auto">ตารางเวลา</h2>
         </div>
         <div class="flex-wrapper justify-content-around mt-4">
-          <div class="timeline-item text-center">
+          <div id="timeline-register" class="timeline-item text-center">
             <div class="blink"></div>
             <img
-              class="image-fluid lazy timeline-icon active"
+              class="image-fluid lazy timeline-icon"
               data-src="/assets/images/timeline-register.png"
               alt="timeline-register"
             />
-            <p>
+            <p class="mt-0">
               รับสมัคร<br />
               1 - 20 มีนาคม
             </p>
           </div>
-          <div class="timeline-item text-center">
+          <div id="timeline-announce" class="timeline-item text-center">
+            <div class="blink"></div>
             <img
               class="image-fluid lazy timeline-icon"
               data-src="/assets/images/timeline-announce.png"
               alt="timeline-announce"
             />
-            <p>
+            <p class="mt-0">
               ประกาศผล<br />
               24 มีนาคม
             </p>
           </div>
-          <div class="timeline-item text-center">
+          <div id="timeline-confirm" class="timeline-item text-center">
+            <div class="blink"></div>
             <img
               class="image-fluid lazy timeline-icon"
               data-src="/assets/images/timeline-confirm.png"
               alt="timeline-confirm"
             />
-            <p>
+            <p class="mt-0">
               ยืนยันสิทธิ์<br />
               24 - 27 มีนาคม
             </p>
           </div>
-          <div class="timeline-item text-center">
+          <div id="timeline-camp" class="timeline-item text-center">
+            <div class="blink"></div>
             <img
               class="image-fluid lazy timeline-icon"
               data-src="/assets/images/timeline-camp.png"
               alt="timeline-camp"
             />
-            <p>
+            <p class="mt-0">
               วันค่าย<br />
               5 - 8 เมษายน
             </p>
@@ -705,9 +708,14 @@
             <ol>
               <li>กาลครั้งหนึ่ง มีฤาษีอายุมากเจอกับหนุ่มน้อยในป่าลึก ฤาษีบอกหนุ่มน้อยคนนั้นว่า "เจ้าเคยเจอแม่มดไหม" หนุ่มน้อยตอบทันควันว่า "ไม่เคยเลยครับ พวกเขาเป็นคนอย่างไรกันหรือ?" ฤาษีเล่าว่า "ในป่านี้ มีแม่มด แม่มดบางคนเป็นคนฉลาด แม่มดบางคนเป็นคนโหดเหี้ยม และแม่มดที่โหดเหี้ยมทุกคนเป็นคนฉลาด" หนุ่มน้อยจึงถามกลับไปว่า "แล้วแม่มดที่ฉลาดโหดเหี้ยมหรือเปล่า?" อยากให้น้องๆ ให้คำตอบหนุ่มน้อยพร้อมคำอธิบาย</li>
               <li>ในฐานะที่เจ้า จะมาเป็นเป็นจอมเวทย์ฝึกหัด สิ่งที่ขาดไปไม่ได้เลยสำหรับเหล่าจอมเวทย์อย่างพวกเรานั่นก็คือ เหล่าบริวารรับใช้ที่ซื่อสัตย์จำนวนทั้งสิ้น 9 ตนด้วยกัน แต่เคราะห์ร้ายระหว่างร่ายคาถาเกิดเหตุไม่คาดฝันเกิดขึ้น วงเวทย์อัญเชิญของพวกเจ้าทำให้มีผีร้ายปะปนมากับเหล่าบริวารของเจ้าจำนวน 2 ตน ทำให้พวกเจ้าต้องจัดการเหล่าผีร้ายให้สิ้นไป ซึ่งเคราะห์ดีที่พวกเจ้ามีตาวิเศษ ที่จะทำให้เห็นเลขอายุขัยของเหล่าบริวารของเจ้าได้ ซึ่งบริวารของเจ้าทั้ง 9 จะมีอายุขัยรวมกัน เท่ากับ 100 ปี พวกเจ้าจงหาวิธีที่จะกำจัดเหล่าผีร้ายทั้งหมดให้ได้ (พร้อมอธิบายอย่างละเอียดนะจ้ะหนูๆ อิอิ และรับประกันว่าจะมีแค่เลข ชุดเดียวที่เป็นไปได้และเลขทุกตัวไม่ซ้ำกันนะจ้ะ)</li>
-              <li>ให้น้องๆ สร้างสรรค์เว็บขึ้นมาตามภาพด้านบน โดยจะใช้เทคนิคอะไร ภาษาอะไร เติมแต่งอะไรได้เต็มที่! โดยส่งได้ทั้งวิธีคัดลอกโค้ดมาวาง, อัพไฟล์ขึ้น Google Drive หรืออัพลง Public Repository เช่น GitHub แล้วแปะลิ้งก์ไว้</li>
+              <li>ให้น้องๆ สร้างสรรค์เว็บขึ้นมาตามภาพด้านบน โดยจะใช้เทคนิคอะไร ภาษาอะไร เติมแต่งอะไรได้เต็มที่! โดยส่งได้ทั้งวิธีคัดลอกโค้ดมาวาง, อัพไฟล์ขึ้น Google Drive หรืออัพลง Public Repository เช่น GitHub แล้วแปะลิ้งก์ไว้
+                <div>
+                  <a href="/assets/images/programming-question.JPG" target="_blank">
+                    <img class="mt-2 image-fluid lazy" src="/assets/images/programming-question.JPG" alt="programming-question-3">
+                  </a>
+                </div>
+              </li>
             </ol>
-            <img class="mt-2 image-fluid lazy" src="/assets/images/programming-question.JPG" alt="programming-question-3">
           </div>
           <button data-target="modal-programming" class="back-button close-modal">ย้อนกลับ</button>
         </div>

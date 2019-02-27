@@ -172,7 +172,8 @@
   position: absolute;
   left: 0;
   right: 0;
-  min-width: 210px;
+  min-width: 197.25px;
+  width: 100%;
   text-align: center;
   bottom: 5%;
   transition: all 0.7s ease;
@@ -242,6 +243,7 @@
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
+  cursor: pointer;
 }
 
 /* aura  */
@@ -332,4 +334,14 @@
 .major-card.is-4 .view-question-button:focus,
 .major-card.is-4 .view-question-button:hover {
   box-shadow: 0 0 10px #4babb9;
+}
+
+@media screen and (min-width: 815px) and (max-width: 1077px) {
+  .major-card {
+    width: 197.25px;
+  }
+
+  .side.front .content {
+    bottom: 28%;
+  }
 }
