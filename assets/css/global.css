@@ -208,3 +208,7 @@ button {
 #about, #major, #timeline, #faq {
   padding-top: 3rem;
 }
+
+.logo {
+  width: 260px;
+}
