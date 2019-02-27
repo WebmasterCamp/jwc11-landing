@@ -10,10 +10,17 @@
   width: 262px;
   height: 430px;
   position: relative;
-  transition: box-shadow 0.3s ease-in-out;
-  -webkit-transition: box-shadow 0.3s ease-in-out;
-  -moz-transition: box-shadow 0.3s ease-in-out;
-  -o-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, opacity 0.1s ease-in-out, transform 0.5s ease-in-out;
+  -webkit-transition: box-shadow 0.3s ease-in-out, opacity 0.1s ease-in-out, transform 0.5s ease-in-out;
+  -moz-transition: box-shadow 0.3s ease-in-out, opacity 0.1s ease-in-out, transform 0.5s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out, opacity 0.1s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.major-card.active {
+  transition: box-shadow 0.3s ease-in-out, opacity 0.7s ease-in-out, transform 0.5s ease-in-out;
+  -webkit-transition: box-shadow 0.3s ease-in-out, opacity 0.7s ease-in-out, transform 0.5s ease-in-out;
+  -moz-transition: box-shadow 0.3s ease-in-out, opacity 0.7s ease-in-out, transform 0.5s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out, opacity 0.7s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .carousel-container {
@@ -168,10 +175,10 @@
   min-width: 210px;
   text-align: center;
   bottom: 5%;
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
+  transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
 }
 
 .side.front > .content small {
@@ -262,8 +269,12 @@
   box-shadow: 0px 0px 30px #4babb9;
 }
 
-.major-card.active .side.front > .content {
-  visibility: hidden;
+.side.front > .content {
+  opacity: 1;
+}
+
+.major-card.active .side.front > .content{
+  opacity: 0;
 }
 
 .rounded {

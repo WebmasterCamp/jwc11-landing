@@ -43,7 +43,8 @@ li.question-item:last-child {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  color: #0B667E;  
+  color: #0B667E;
+  font-weight: 300;
 }
 
 
