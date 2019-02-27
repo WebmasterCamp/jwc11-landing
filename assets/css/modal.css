@@ -14,9 +14,10 @@
 }
 
 .modal-body {
-  width: 793px;
+  width: 320px;
+  height: 500px;
+  background-size: cover;
   margin: 2.5rem auto 0;
-  height: 490px;
   padding: 0px;
   background-repeat: no-repeat;
   background-position: center;
@@ -25,7 +26,7 @@
 .modal-body-inside {
   padding: 5rem 6rem;
   position: relative;
-  height: 50%;
+  height: 60%;
 }
 
 .modal-content {
@@ -109,12 +110,29 @@
 }
 
 
-@media screen and (max-width: 578px) {
+@media screen and (min-width: 375px) {
   .modal-body {
-    width: 300px;
-    height: 500px;
-    background-size: cover;
+    width: 375px;
+    height: 590px;
   }
+  .modal-body-inside {
+    height: 65%;
+  }
+}
+
+@media screen and (min-width: 578px) {
+  .modal-body {
+    width: 793px;
+    height: 490px;
+  }
+
+  .modal-body-inside {
+    height: 50%;
+  }
+}
+
+
+@media screen and (max-width: 578px) {
 
   .modal-body.content {
     background-image: url('/assets/images/modal-vertical-content.png');
@@ -133,12 +151,16 @@
   }
 
   .modal-body-inside {
-    padding: 3.5rem 2.7rem;
+    padding: 3.5rem 3.5rem;
     position: relative;
-    height: 60%;
   }
 
   .modal-body-inside .back-button {
     bottom: -30px;
   }
+}
+
+.modal-content ol {
+  padding-left: 25px;
+  margin: 0;
 }

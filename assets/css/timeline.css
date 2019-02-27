@@ -1,13 +1,42 @@
 .timeline-item {
   width: 180px;
-  margin: 0 50px;
+  position: relative;
+}
+
+@keyframes blink {
+  0% {
+    box-shadow: 0 0 10px #fff;
+  }
+
+  40% {
+    box-shadow: 0 0 70px #fff;
+
+  }
+
+  100% {
+    box-shadow: 0 0 10px #fff;
+  }
+}
+
+.blink {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  width: 112px;
+  height: 110px;
+  border-radius: 50%;
+  animation: blink 7s ease 0s infinite;
+  transform: translateX(-50%);
 }
 
 @media screen and (max-width: 576px) {
   .timeline-item {
-    flex: 0 0 40%;
-    width: 40%;
-    margin: 0;
+    width: 145px;
+  }
+  .blink {
+    top: 25px;
+    width: 88px;
+    height: 90px;
   }
 }
 
@@ -17,4 +46,5 @@
 
 .timeline-icon.active {
   filter: grayscale(0);
+  position: relative;
 }
