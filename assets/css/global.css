@@ -4,9 +4,8 @@ body {
   background-image: url(../images/background.png);
   background-size: cover;
   background-position: center;
-  font-family: 'Pridi', serif;
+  font-family: 'Pridi', serif, Tahoma;
   color: white;
-  /* padding: 0 15px; */
   font-size: 20px;
   overflow-x: hidden;
 }

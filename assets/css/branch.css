@@ -279,6 +279,7 @@
   transform: translateX(-50%);
   width: 113px;
   cursor: pointer;
+  outline: none;
 }
 
 .major-card.is-1 .side.back .view-question-button {
@@ -299,4 +300,20 @@
 .major-card.is-4 .side.back .view-question-button {
   color: #4BABB9;
   border: 1px solid #4BABB9;
+}
+
+.major-card.is-1 .view-question-button:focus, .major-card.is-1 .view-question-button:hover {
+  box-shadow: 0 0 10px #BF8D10;
+}
+
+.major-card.is-2 .view-question-button:focus, .major-card.is-2 .view-question-button:hover {
+  box-shadow: 0 0 10px #D56394;
+}
+
+.major-card.is-3 .view-question-button:focus, .major-card.is-3 .view-question-button:hover {
+  box-shadow: 0 0 10px #73A34D;
+}
+
+.major-card.is-4 .view-question-button:focus, .major-card.is-4 .view-question-button:hover {
+  box-shadow: 0 0 10px #4BABB9;
 }

@@ -71,13 +71,14 @@
 }
 
 
-.modal-body.design .back-button {
+.modal-body.content .back-button {
   border: 1px solid #C59316;
   color: #C59316;
 }
 
-.modal-body.marketing .back-button:hover {
+.modal-body.content .back-button:hover {
   background: #C59316;
+  color: #fff;
 }
 
 .modal-body.design .back-button {
@@ -85,26 +86,20 @@
   color: #DD6A9B;
 }
 
-.modal-body.marketing .back-button:hover {
-  background: #DD6A9B;
+.modal-body.content .back-button:focus, .modal-body.content .back-button:hover {
+  box-shadow: 0 0 10px #BF8D10;
 }
 
-.modal-body.marketing .back-button {
-  border: 1px solid #7DA756;
-  color: #7DA756;
+.modal-body.design .back-button:focus, .modal-body.design .back-button:hover {
+  box-shadow: 0 0 10px #D56394;
 }
 
-.modal-body.marketing .back-button:hover {
-  background: #7DA756;
+.modal-body.marketing .back-button:focus, .modal-body.marketing .back-button:hover {
+  box-shadow: 0 0 10px #73A34D;
 }
 
-.modal-body.programming .back-button {
-  border: 1px solid #52ABB7;
-  color: #52ABB7;
-}
-
-.modal-body.programming .back-button:hover {
-  background: #52ABB7;
+.modal-body.programming .back-button:focus, .modal-body.marketing .back-button:hover {
+  box-shadow: 0 0 10px #4BABB9;
 }
 
 
@@ -116,19 +111,19 @@
   }
 
   .modal-body.content {
-    background-image: url('/assets/images/modal-horizon-content.png');
+    background-image: url('/assets/images/modal-vertical-content.png');
   }
   
   .modal-body.design {
-    background-image: url('/assets/images/modal-horizon-design.png');
+    background-image: url('/assets/images/modal-vertical-design.png');
   }
   
   .modal-body.marketing {
-    background-image: url('/assets/images/modal-horizon-marketing.png');
+    background-image: url('/assets/images/modal-vertical-marketing.png');
   }
   
   .modal-body.programming {
-    background-image: url('/assets/images/modal-horizon-programming.png');
+    background-image: url('/assets/images/modal-vertical-programming.png');
   }
 
   .modal-body-inside {

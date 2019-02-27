@@ -131,14 +131,9 @@ let majorCards = Array.from(document.querySelectorAll('.major-card'))
 
 
 majorCards.map(each => {
-  each.addEventListener('click', function () {
+  each.addEventListener('click', function (event) {
+    if (event.target.name === 'view-question') return event.preventDefault()
     viewDetail(this)
-  }, false)
-})
-
-viewDetailButtons.map(eachBtn => {
-  eachBtn.addEventListener('click', function () {
-    viewDetail(this.parentElement.parentElement)
   }, false)
 })
 
@@ -154,12 +149,12 @@ function viewDetail(element) {
   if (widthViewport < 576 && branches[current] !== selectedBranch)
     return
 
-  element.classList.add('active')
+  element.classList.toggle('active')
 }
 
 // detect click outside card it will hide
 document.addEventListener('click', function (event) {
-  if (!event.target.closest('.major-card')) {
+  if (!event.target.closest('.major-card') && !event.target.closest('.modal-container')) {
     majorCards.map(each => {
       each.classList.remove('active')
     })
