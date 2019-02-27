@@ -48,3 +48,27 @@
   filter: grayscale(0);
   position: relative;
 }
+
+@media screen and (min-width: 465px) and (max-width: 726px) {
+  .timeline-item {
+    width: 232.5px;
+  }
+
+  .blink.active {
+    top: 44px;
+    width: 135px;
+    height: 135px;
+  }
+}
+
+@media screen and (min-width: 727px) and (max-width: 749px) {
+  .timeline-item {
+    width: 300px;
+  }
+
+  .blink.active {
+    top: 53px;
+    width: 180px;
+    height: 182px;
+  }
+}
