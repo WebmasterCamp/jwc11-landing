@@ -4,9 +4,8 @@ body {
   background-image: url(../images/background.png);
   background-size: cover;
   background-position: center;
-  font-family: 'Pridi', serif;
+  font-family: 'Pridi', serif, Tahoma;
   color: white;
-  /* padding: 0 15px; */
   font-size: 20px;
   overflow-x: hidden;
 }
@@ -179,7 +178,7 @@ button {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .tablet-fullwidth {
     flex: 0 0 100%;
     width: 100%;
@@ -204,4 +203,12 @@ button {
 
 .full-height {
   height: 100%;
+}
+
+#about, #major, #timeline, #faq {
+  padding-top: 3rem;
+}
+
+.logo {
+  width: 260px;
 }

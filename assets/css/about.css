@@ -116,11 +116,13 @@
   }
 
   .candle:nth-child(2) {
-    top: 245px;
+    top: 260px;
+    left: 140px;
   }
 
   .candle:nth-child(3) {
-    top: 245px;
+    top: 260px;
+    right: 140px;
   }
 
 }
