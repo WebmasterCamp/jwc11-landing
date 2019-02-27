@@ -165,7 +165,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  width: 210px;
+  min-width: 210px;
   text-align: center;
   bottom: 5%;
   transition: all 0.5s ease;
