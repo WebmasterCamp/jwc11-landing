@@ -10,3 +10,11 @@
     margin: 0;
   }
 }
+
+.timeline-icon {
+  filter: grayscale(0.7);
+}
+
+.timeline-icon.active {
+  filter: grayscale(0);
+}
