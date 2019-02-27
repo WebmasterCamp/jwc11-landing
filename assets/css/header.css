@@ -22,3 +22,9 @@
     display: inline;
   }
 }
+
+@media screen and (min-width: 375px) and (max-width: 456px) {
+  .slogan {
+    font-size: 42px;
+  }
+}
