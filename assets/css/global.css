@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #338EBB;
+  background-color: #338ebb;
   background-image: url('../images/background.jpg');
   background-size: cover;
   background-position: top center;
@@ -66,8 +66,17 @@ button {
 
 .section {
   min-height: 100vh;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 576px) {
+  .section {
+    padding-left: 24px;
+    padding-right: 24px;
+    min-height: 0;
+  }
 }
 
 .flex-wrapper {
@@ -164,11 +173,12 @@ button {
 
 .section-title {
   background-size: cover;
-  background-image: url('/assets/images/paper_board.png');
+  background-image: url('/assets/images/paper_board_edit.png');
   width: 500px;
   height: 150px;
   text-align: center;
   padding-top: 104px;
+  font-size: 2.5em;
 }
 
 /* style on mobile size */
@@ -185,7 +195,8 @@ button {
   .section-title {
     width: 310px;
     height: 100px;
-    padding-top: 57px;
+    padding-top: 62px;
+    font-size: 1.7em;
   }
 
   .mx-mobile-auto {
@@ -225,10 +236,18 @@ button {
   height: 100%;
 }
 
-#about, #major, #timeline, #faq {
+#about,
+#major,
+#timeline,
+#faq {
   padding-top: 3rem;
 }
 
 .logo {
   width: 260px;
+}
+
+.mock {
+  opacity: 0.4;
+  background-color: rgba(255, 0, 0, 0.5);
 }

@@ -4,7 +4,7 @@
 }
 
 #main-sponsors {
-  margin-top: 6em;
+  margin-top: 4em;
   text-align: center;
 }
 
@@ -13,8 +13,21 @@
   background: #e1a34e;
 }
 
+.primary-btn {
+  color: #fff;
+  background: #e1a34e;
+}
+
 .break {
   display: none;
+}
+
+.slogan {
+  word-break: break-word;
+}
+
+.creator-title {
+  font-size: 2.5em;
 }
 
 @media screen and (min-width: 375px) and (max-width: 730px) {
@@ -26,5 +39,14 @@
 @media screen and (min-width: 375px) and (max-width: 456px) {
   .slogan {
     font-size: 42px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #intro {
+    padding-top: 2rem;
+  }
+  .creator-title {
+    font-size: 2em;
   }
 }

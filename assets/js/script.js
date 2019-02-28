@@ -1,36 +1,36 @@
 // collapsible QA section
-var collapsibleList = document.getElementsByClassName("collapsible");
+var collapsibleList = document.getElementsByClassName('collapsible')
 
 function hideOtherCollapse(exceptElement) {
   for (let index = 0; index < collapsibleList.length; index++) {
     let collapseItem = collapsibleList[index]
-    let content = collapseItem.nextElementSibling;
+    let content = collapseItem.nextElementSibling
     let parent = collapseItem.parentElement
     if (exceptElement !== collapsibleList[index]) {
       collapseItem.firstElementChild.classList.remove('active')
-      content.style.maxHeight = null;
-      collapseItem.style.background = null;
+      content.style.maxHeight = null
+      collapseItem.style.background = null
       parent.style.color = null
     }
   }
 }
- 
+
 for (let index = 0; index < collapsibleList.length; index++) {
-  collapsibleList[index].addEventListener("click", function() {
+  collapsibleList[index].addEventListener('click', function() {
     this.firstElementChild.classList.toggle('active')
-    let content = this.nextElementSibling;
+    let content = this.nextElementSibling
     let parent = this.parentElement
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-      this.style.background = null;
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null
+      this.style.background = null
       parent.style.color = null
     } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-      this.style.background = '#E0E0E0';
+      content.style.maxHeight = content.scrollHeight + 'px'
+      this.style.background = '#E0E0E0'
       parent.style.color = '#0B667E'
       hideOtherCollapse(this)
     }
-  });
+  })
 }
 
 setTimeout(function() {
@@ -38,27 +38,26 @@ setTimeout(function() {
 }, 500)
 
 // carousel branch
-var current = 0;
+var current = 0
 
 var positions = {
   front: 'rotateY(0deg) translateZ(250px)',
   right: 'rotateY(77deg) translateZ(140px)',
   back: 'rotateY(0deg) translateZ(100px)',
-  left: 'rotateY(-77deg) translateZ(140px)'
+  left: 'rotateY(-77deg) translateZ(140px)',
 }
 
 function carousel(prevButton, nextButton) {
-
   let cards = Array.from(document.querySelectorAll('.major-card'))
 
   let positionList = [
     positions.front,
     positions.right,
     positions.back,
-    positions.left
+    positions.left,
   ]
 
-  function changeStyle () {
+  function changeStyle() {
     cards.map((each, index) => {
       each.style.transform = positionList[index]
       if (positions.front === positionList[index]) {
@@ -69,27 +68,52 @@ function carousel(prevButton, nextButton) {
     })
   }
 
-  function next () {
+  function next() {
     current = (current + 1) % 4
     current = current === -1 ? 3 : current
     positionList.splice(0, 0, positionList.pop())
     changeStyle()
   }
 
-
-  function prev () {
+  function prev() {
     current = (current - 1) % 4
     current = current === -1 ? 3 : current
     positionList.push(positionList.shift())
     changeStyle()
   }
-
-  this.init = function () {
+  function addSwipe() {
+    const sw = document.getElementById('swipeable')
+    let status = {
+      onMove: false,
+    }
+    sw.addEventListener('touchstart', e => {
+      status.onMove = true
+      status.x = e.changedTouches[0].pageX
+      status.timeStamp = e.timeStamp
+    })
+    sw.addEventListener('touchend', e => {
+      if (status.onMove) {
+        status.onMove = false
+        const dx = e.changedTouches[0].pageX - status.x
+        status.x = 0
+        if (e.timeStamp - status.timeStamp > 100 && Math.abs(dx) > 40) {
+          if (dx > 0) {
+            prev()
+          } else {
+            next()
+          }
+        }
+        status.timeStamp = 0
+      }
+    })
+  }
+  this.init = function() {
     document.querySelector('.major-card.is-1').style.zIndex = '10'
     prevElement = document.querySelector(prevButton)
     nextElement = document.querySelector(nextButton)
     prevElement.addEventListener('click', prev)
     nextElement.addEventListener('click', next)
+    addSwipe()
   }
 }
 
@@ -104,37 +128,40 @@ function getViewport() {
 
   // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
   if (typeof window.innerWidth != 'undefined') {
-    viewPortWidth = window.innerWidth,
-    viewPortHeight = window.innerHeight
+    ;(viewPortWidth = window.innerWidth), (viewPortHeight = window.innerHeight)
   }
 
   // IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
-  else if (typeof document.documentElement != 'undefined'
-  && typeof document.documentElement.clientWidth !=
-  'undefined' && document.documentElement.clientWidth != 0) {
-    viewPortWidth = document.documentElement.clientWidth,
-    viewPortHeight = document.documentElement.clientHeight
+  else if (
+    typeof document.documentElement != 'undefined' &&
+    typeof document.documentElement.clientWidth != 'undefined' &&
+    document.documentElement.clientWidth != 0
+  ) {
+    ;(viewPortWidth = document.documentElement.clientWidth),
+      (viewPortHeight = document.documentElement.clientHeight)
   }
 
   // older versions of IE
   else {
-    viewPortWidth = document.getElementsByTagName('body')[0].clientWidth,
-    viewPortHeight = document.getElementsByTagName('body')[0].clientHeight
+    ;(viewPortWidth = document.getElementsByTagName('body')[0].clientWidth),
+      (viewPortHeight = document.getElementsByTagName('body')[0].clientHeight)
   }
-  return [viewPortWidth, viewPortHeight];
+  return [viewPortWidth, viewPortHeight]
 }
-
 
 let viewDetailButtons = Array.from(document.querySelectorAll('.side.front'))
 
 let majorCards = Array.from(document.querySelectorAll('.major-card'))
 
-
 majorCards.map(each => {
-  each.addEventListener('click', function (event) {
-    if (event.target.name === 'view-question') return event.preventDefault()
-    viewDetail(this)
-  }, false)
+  each.addEventListener(
+    'click',
+    function(event) {
+      if (event.target.name === 'view-question') return event.preventDefault()
+      viewDetail(this)
+    },
+    false,
+  )
 })
 
 function viewDetail(element) {
@@ -142,19 +169,21 @@ function viewDetail(element) {
     0: 'content',
     1: 'design',
     2: 'marketing',
-    3: 'programming'
+    3: 'programming',
   }
   const [widthViewport, height] = getViewport()
   selectedBranch = element.getAttribute('data-branch')
-  if (widthViewport < 576 && branches[current] !== selectedBranch)
-    return
+  if (widthViewport < 576 && branches[current] !== selectedBranch) return
 
   element.classList.toggle('active')
 }
 
 // detect click outside card it will hide
-document.addEventListener('click', function (event) {
-  if (!event.target.closest('.major-card') && !event.target.closest('.modal-container')) {
+document.addEventListener('click', function(event) {
+  if (
+    !event.target.closest('.major-card') &&
+    !event.target.closest('.modal-container')
+  ) {
     majorCards.map(each => {
       each.classList.remove('active')
     })
@@ -169,20 +198,18 @@ document.addEventListener('click', function (event) {
   }
 })
 
-
 // toggle button
-document.querySelector('.navicon-button').addEventListener('click', function () {
+document.querySelector('.navicon-button').addEventListener('click', function() {
   this.classList.toggle('open')
   document.querySelector('.nav-list').classList.toggle('show')
 })
-
 
 // major branch
 var viewQuestionButtons = document.querySelectorAll('.view-question-button')
 var modals = document.querySelectorAll('.modal-container')
 
 for (let index = 0; index < viewQuestionButtons.length; index++) {
-  viewQuestionButtons[index].addEventListener('click', function () {
+  viewQuestionButtons[index].addEventListener('click', function() {
     let target = this.getAttribute('data-target')
     document.getElementById(target).classList.toggle('show')
   })
@@ -191,14 +218,14 @@ for (let index = 0; index < viewQuestionButtons.length; index++) {
 var closeModalButtons = document.querySelectorAll('.close-modal')
 
 for (let index = 0; index < closeModalButtons.length; index++) {
-  closeModalButtons[index].addEventListener('click', function () {
+  closeModalButtons[index].addEventListener('click', function() {
     let target = this.getAttribute('data-target')
     document.getElementById(target).classList.remove('show')
   })
 }
 
 for (let index = 0; index < modals.length; index++) {
-  modals[index].addEventListener('click', function () {
+  modals[index].addEventListener('click', function() {
     if (!event.target.closest('.modal-body')) {
       this.classList.toggle('show')
     }
@@ -206,7 +233,7 @@ for (let index = 0; index < modals.length; index++) {
 }
 
 // check timeline time
-Date.prototype.isAfter = function (anotherDate) {
+Date.prototype.isAfter = function(anotherDate) {
   return this.getTime() > anotherDate.getTime()
 }
 
@@ -219,24 +246,24 @@ var now = new Date()
 checkOrders = [
   {
     date: dummyDate,
-    element: 'timeline-register'
+    element: 'timeline-register',
   },
   {
     date: campDate,
-    element: 'timeline-camp'
+    element: 'timeline-camp',
   },
   {
     date: confirmDate,
-    element: 'timeline-confirm'
+    element: 'timeline-confirm',
   },
   {
     date: announceDate,
-    element: 'timeline-announce'
+    element: 'timeline-announce',
   },
   {
     date: registerDate,
-    element: 'timeline-register'
-  }
+    element: 'timeline-register',
+  },
 ]
 
 let active = true

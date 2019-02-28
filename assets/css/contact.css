@@ -1,5 +1,7 @@
 .contact-widget {
-  width: 400px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 340px;
   height: 500px;
   margin: 1em;
   background: white;
@@ -7,6 +9,16 @@
   border-radius: 4px;
 }
 
+@media screen and (max-width: 576px) {
+  .contact-widget {
+    margin: 0 0 20px 0;
+  }
+}
+
 .contact-widget.twitter {
   overflow-y: scroll;
+}
+
+.contact-widget.facebook {
+  overflow-x: scroll;
 }

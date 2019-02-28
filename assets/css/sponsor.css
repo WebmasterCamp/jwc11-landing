@@ -10,24 +10,22 @@
 .sponsor-item {
   margin: 5px 15px;
   border-radius: 50%;
-  min-width: 100px;
-  max-width: 100px;
-  min-height: 100px;
-  max-height: 100px;
+  width: 130px;
+  height: 130px;
   display: inline-block;
 }
 
 .sponsor-item > img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .sponsor-card {
-  background-image: url('/assets/images/rentangle-board.png');
-  background-position: top center;
-  margin: 3rem -15px;
-  width: calc(100% + 30px);
-  min-height: 996px;
+  width: 100%;
+  background: rgba(225, 163, 78, 0.7);
+  border: 10px solid #FFBC5F;
+  min-height: 600px;
   padding-top: 20px;
-  background-repeat: no-repeat;
+  box-sizing: border-box;
 }

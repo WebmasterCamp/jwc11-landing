@@ -30,6 +30,7 @@
   color: white;
   text-decoration: none;
   padding: 10px 15px;
+  font-size: 0.9em;
 }
 
 .navicon-button {
@@ -44,32 +45,32 @@
 
 .navicon {
   position: relative;
-  width: 2rem;
-  height: .3125rem;
+  width: 1.5rem;
+  height: 0.19rem;
   background: #fff;
   transition: 0.5s;
   border-radius: 2.5rem;
 }
 
-.navicon:before, .navicon:after {
+.navicon:before,
+.navicon:after {
   display: block;
-  content: "";
-  height: .3125rem;
-  width: 2rem;
+  content: '';
+  height: 0.19rem;
+  width: 1.5rem;
   background: #fff;
   position: absolute;
   z-index: -1;
-  transition: 0.3s ;
+  transition: 0.3s;
   border-radius: 1rem;
-
 }
 
 .navicon:before {
-  top: 0.625rem;  
+  top: 0.5rem;
 }
 
 .navicon:after {
-  top: -0.625rem;
+  top: -0.5rem;
 }
 
 .open .navicon {
@@ -83,7 +84,7 @@
 
 .open .navicon:after {
   top: 0;
-  transform: rotate(45deg); 
+  transform: rotate(45deg);
 }
 
 @media screen and (min-width: 576px) {
@@ -92,7 +93,12 @@
     flex-direction: row;
     justify-content: center;
   }
-  
+}
+
+@media screen and (max-width: 800px) {
+  .nav-item {
+    font-size: 0.8em;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -100,25 +106,25 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease;
-    height: 200px;
+    height: 300px;
     position: absolute;
     top: 50px;
     left: 0;
   }
 
   .nav-list.show {
-    max-height: 200px;
+    max-height: 300px;
   }
-  
+
   .nav-item {
-    background-color: #2C345E;
+    background-color: #2c345e;
     display: flex;
     min-height: 50px;
+    font-size: 1em;
   }
 
   .nav-item a {
     width: 100%;
     text-align: center;
   }
-
 }

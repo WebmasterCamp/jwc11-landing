@@ -1,16 +1,16 @@
 .question-list {
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   margin: auto;
   border-radius: 20px;
   overflow: hidden;
   list-style: none;
   padding: 0;
-  max-width: 90%;
   background-color: #E0E0E0;
 }
 
 li.question-item {
-  border-bottom: 2px solid #F2F2F2;
+  border-bottom: 1px solid #F2F2F2;
   color: #52ABB7;
 }
 
