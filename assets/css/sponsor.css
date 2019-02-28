@@ -40,7 +40,7 @@
   background: rgba(225, 163, 78, 0.7);
   border: 10px solid #ffbc5f;
   min-height: 600px;
-  padding-top: 20px;
+  padding: 24px;
   box-sizing: border-box;
   display: flex;
   flex-flow: column nowrap;
@@ -62,7 +62,9 @@
   display: flex;
   flex-direction: row wrap;
   justify-content: space-around;
+  align-self: stretch;
   align-items: flex-start;
+  margin: 8px 0;
 }
 
 .creator-image {
@@ -73,6 +75,32 @@
   border-radius: 40px;
 }
 
+.level5 > a > img {
+  height: 180px;
+  width: auto;
+  display: block;
+}
+
+.level4 > a > img {
+  height: 130px;
+  width: auto;
+  display: block;
+}
+.level3 > a > img {
+  height: 100px;
+  width: auto;
+  display: block;
+}
+.level2 > a > img {
+  height: 100px;
+  width: auto;
+  display: block;
+}
+.level1 > a > img {
+  height: 70px;
+  width: auto;
+  display: block;
+}
 @media screen and (max-width: 900px) {
   .media-partner-container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
