@@ -2,7 +2,7 @@
 <html lang="th">
   <head>
     <meta charset="utf-8" />
-    <title>Junior Webmaster Camp XI</title>
+    <title>Junior Webmaster Camp 11</title>
     <!-- Facebook Open Graph -->
     <meta property="og:url" content="https://xi.jwc.in.th" />
     <meta property="og:title" content="Junior Webmaster Camp 11" />
@@ -135,7 +135,7 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@11.0.2/dist/lazyload.min.js"></script>
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
       // automate redirect to https
       if (
         location.protocol != 'https:' &&
@@ -145,7 +145,7 @@
           'https:' +
           window.location.href.substring(window.location.protocol.length)
       }
-    </script> -->
+    </script>
   </head>
 
   <body>
@@ -181,7 +181,7 @@
       <div class="container">
         <div class="text-center">
           <img class="logo" src="/logo/logo.png" alt="jwc11-logo" />
-          <h2>Junior Webmaster Camp ๑๑</h2>
+          <h2 class="camp-name">Junior Webmaster Camp ๑๑</h2>
           <h1 class="slogan">
             “ศึกมนตรา<br class="break" />
             แก้ปัญหาโรงเรียน”
@@ -429,8 +429,10 @@
         </div>
 
         <div class="text-center mt-4">
-          <a href="https://registration.jwc.in.th" class="button"
-            >สมัครเข้าค่าย!</a
+          <a
+            href="https://registration.jwc.in.th"
+            class="button radius-50 animated pulse infinite box-shadow"
+          >สมัครเข้าค่าย JWC รุ่นที่11เลย คลิ๊ก!</a
           >
         </div>
       </div>
@@ -908,30 +910,27 @@
             </div>
         </div>
       </div>
-      <div align="center" style="margin: 2em 0;">
+      <div class="margin-y-2-em text-center">
           <a
             href="https:/press.jwc.in.th"
-            class="button display-inline-block mt-3 primary-btn"
-            
-            >ร่วมประชาสัมพันธ์ค่ายของเรา</a
+            target="_blank"
+            class="button display-inline-block primary-btn"
+          >ร่วมประชาสัมพันธ์ค่ายของเรา</a
           >
         </div>
     </section>
 
-    <section id="contact" >
+    <section id="contact" class="section min-height-0">
         <div class="container">
           <div class="row text-center">
             <h2 class="section-title mx-auto">จัดทำโดย</h2>
           </div>
-          <div
-            style="display: flex; flex-flow: column nowrap; justify-content: center;margin: 2rem 0;"
-          >
-            <div style="display: flex; flex-flow: row wrap; justify-content: center;">
+          <div class="flex-wrapper flex-column">
+            <div class="camp-creator">
               <img src="/logo/ywc16.svg" alt="ywc16" class="creator-image">
               <img src="/logo/TWA-logo-02.svg" alt="twa" class="creator-image" >
             </div>
           </div>
-          
         </div>
       </section>
 

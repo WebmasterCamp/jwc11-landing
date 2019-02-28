@@ -24,6 +24,7 @@
 
 .slogan {
   word-break: break-word;
+  line-height: 1.1em;
 }
 
 .creator-title {
@@ -36,9 +37,13 @@
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 456px) {
+@media screen and (max-width: 456px) {
   .slogan {
-    font-size: 42px;
+    font-size: 35px;
+  }
+
+  .camp-name {
+    font-size: 24px
   }
 }
 
@@ -50,3 +55,4 @@
     font-size: 2em;
   }
 }
+

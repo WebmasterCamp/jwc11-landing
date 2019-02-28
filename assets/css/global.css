@@ -57,6 +57,7 @@ button {
   color: #fff;
   background: #e1a34e;
   text-decoration: none;
+  display: inline-block;
 }
 
 .container {
@@ -69,13 +70,13 @@ button {
   padding-left: 80px;
   padding-right: 80px;
   margin-bottom: 40px;
+  padding-top: 3em;
 }
 
 @media screen and (max-width: 576px) {
   .section {
     padding-left: 24px;
     padding-right: 24px;
-    min-height: 0;
   }
 }
 
@@ -103,6 +104,10 @@ button {
 
 .justify-content-around {
   justify-content: space-around;
+}
+
+.flex-column {
+  flex-direction: column;
 }
 
 #copyright {
@@ -193,8 +198,9 @@ button {
   }
 
   .section-title {
-    width: 310px;
-    height: 100px;
+    width: 270px;
+    height: 75px;
+    padding-top: 46px;
     padding-top: 62px;
     font-size: 1.7em;
   }
@@ -250,4 +256,16 @@ button {
 .mock {
   opacity: 0.4;
   background-color: rgba(255, 0, 0, 0.5);
+}
+
+.min-height-0 {
+  min-height: 0;
+}
+
+.radius-50 {
+  border-radius: 50px;
+}
+
+.margin-y-2-em {
+  margin: 2em 0;
 }

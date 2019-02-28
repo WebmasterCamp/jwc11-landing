@@ -1,0 +1,32 @@
+version: 2
+jobs:
+  checkout_code:
+    working_directory: ~/web
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - persist_to_workspace:
+          root: .
+          paths: .
+  deploy:
+    working_directory: ~/web
+    docker:
+      - image: circleci/node:8
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Deploy to firebase hosting
+          command: |
+            npm install -g firebase-tools
+            firebase deploy --token=$FIREBASE_TOKEN
+
+workflows:
+  version: 2
+  jwc11-landing-pipeline:
+    jobs:
+      - checkout_code
+      - deploy:
+          requires:
+            - checkout_code
