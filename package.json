@@ -1,0 +1,11 @@
+{
+  "name": "jwc11-landing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:bazsup/jwc11-landing.git",
+  "author": "bazsup <supawit.ruen@mail.kmutt.ac.th>",
+  "license": "MIT",
+  "devDependencies": {
+    "firebase-tools": "^6.4.0"
+  }
+}

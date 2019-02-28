@@ -1,32 +1,38 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
 version: 2
 jobs:
-  checkout_code:
-    working_directory: ~/web
+  build:
     docker:
+      # specify the version you desire here
       - image: circleci/node:8
+
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mongo:3.4.4
+
+    working_directory: ~/repo
+
     steps:
       - checkout
-      - persist_to_workspace:
-          root: .
-          paths: .
-  deploy:
-    working_directory: ~/web
-    docker:
-      - image: circleci/node:8
-    steps:
-      - attach_workspace:
-          at: .
-      - run:
-          name: Deploy to firebase hosting
-          command: |
-            sudo npm install -g firebase-tools
-            firebase deploy --token=$FIREBASE_TOKEN
 
-workflows:
-  version: 2
-  jwc11-landing-pipeline:
-    jobs:
-      - checkout_code
-      - deploy:
-          requires:
-            - checkout_code
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+
+      - run: yarn install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - run:
+          name: Deploy to Firebase Hosting
+          command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN
