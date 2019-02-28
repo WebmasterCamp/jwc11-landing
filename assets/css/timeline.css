@@ -1,6 +1,7 @@
 .timeline-item {
   width: 180px;
   position: relative;
+  font-size: 1.2em;
 }
 
 @keyframes blink {
@@ -32,6 +33,7 @@
 @media screen and (max-width: 576px) {
   .timeline-item {
     width: 145px;
+    font-size: 1em;
   }
   .blink.active {
     top: 25px;
