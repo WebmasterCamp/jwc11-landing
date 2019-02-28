@@ -344,4 +344,8 @@
   .side.front .content {
     bottom: 28%;
   }
+
+  .side.back > .content p {
+    font-size: 0.9em;
+  }
 }
