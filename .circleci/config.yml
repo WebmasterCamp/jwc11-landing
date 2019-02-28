@@ -19,7 +19,7 @@ jobs:
       - run:
           name: Deploy to firebase hosting
           command: |
-            npm install -g firebase-tools
+            sudo npm install -g firebase-tools
             firebase deploy --token=$FIREBASE_TOKEN
 
 workflows:
