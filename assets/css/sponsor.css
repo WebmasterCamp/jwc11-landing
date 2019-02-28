@@ -37,7 +37,7 @@
 
 .sponsor-card {
   width: 100%;
-  background: rgba(225, 163, 78, 0.7);
+  background: white;
   border: 10px solid #ffbc5f;
   min-height: 600px;
   padding: 24px;
@@ -58,21 +58,31 @@
   justify-items: center;
 }
 
+.media-partner-title {
+  color: #444;
+}
+
+.media-partner-item > img {
+  height: 100px;
+  width: auto;
+  margin: 8px;
+}
+
 .sponsor-row {
   display: flex;
-  flex-direction: row wrap;
+  flex-flow: row wrap;
   justify-content: space-around;
   align-self: stretch;
   align-items: flex-start;
   margin: 8px 0;
 }
-
+.sponsor-seperator {
+  width: 100%;
+  border-color: rgba(0, 0, 0, 0.06);
+}
 .creator-image {
   height: 160px;
   margin: 16px 24px;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 40px;
-  border-radius: 40px;
 }
 
 .level5 > a > img {
