@@ -356,6 +356,20 @@
     font-size: 0.9em;
   }
 }
+@media screen and (min-width: 144px) and (max-width: 615px) {
+  .major-card {
+    width: 197.25px;
+    height: 328px;
+  }
+
+  .side.front .content {
+    bottom: 5%;
+  }
+
+  .side.back > .content p {
+    font-size: 0.7em;
+  }
+}
 
 @keyframes pulse {
 
