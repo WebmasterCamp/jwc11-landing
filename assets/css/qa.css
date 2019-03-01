@@ -91,3 +91,7 @@ li.question-item:last-child {
   top: 20px;
   right: 10px;
 }
+
+.font-pridi {
+  font-family: 'Pridi', serif, Tahoma;
+}
