@@ -60,6 +60,16 @@ button {
   display: inline-block;
 }
 
+.button > span {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 576px) {
+  .button{
+    font-size: 20px;
+  }
+}
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
