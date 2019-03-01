@@ -277,3 +277,21 @@ checkOrders.map(each => {
     }
   }
 })
+
+function updateRegisteredUser() {
+  const content = document.getElementById('content-card')
+  const marketing = document.getElementById('marketing-card')
+  const design = document.getElementById('design-card')
+  const programming = document.getElementById('programming-card')
+  const getText = n => `สมัครแล้ว ${n} คน`
+  $.get(
+    'https://us-central1-jwcxi-registration.cloudfunctions.net/campers',
+  ).then(e => {
+    content.innerHTML = getText(e.content)
+    marketing.innerHTML = getText(e.marketing)
+    design.innerHTML = getText(e.design)
+    programming.innerHTML = getText(e.programming)
+  })
+}
+
+updateRegisteredUser();
