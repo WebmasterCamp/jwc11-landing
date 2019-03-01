@@ -1,7 +1,7 @@
 body {
   margin: 0;
   background-color: #222542;
-  background-image: url('../images/background.jpg');
+  background-image: url('/assets/images/bgjwc.svg');
   background-size: cover;
   background-position: top center;
   font-family: 'Pridi', serif, Tahoma;
