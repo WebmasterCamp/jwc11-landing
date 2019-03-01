@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="480px" height="3000px" viewBox="0 0 480 3000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#486EFA" offset="0%"></stop>
+            <stop stop-color="#BD6902" offset="63.583815%"></stop>
+            <stop stop-color="#315CFD" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="51.1645508%" cy="10.5689988%" fx="51.1645508%" fy="10.5689988%" r="177.288827%" gradientTransform="translate(0.511646,0.105690),scale(1.000000,0.160000),rotate(90.000000),scale(1.000000,1.036903),translate(-0.511646,-0.105690)" id="radialGradient-2">
+            <stop stop-color="#000000" stop-opacity="0.96727808" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="78.1231885%" fx="50%" fy="78.1231885%" r="192.587581%" gradientTransform="translate(0.500000,0.781232),scale(1.000000,0.160000),rotate(90.000000),scale(1.000000,2.148343),translate(-0.500000,-0.781232)" id="radialGradient-3">
+            <stop stop-color="#000000" stop-opacity="0.96727808" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="35.4910602%" fx="50%" fy="35.4910602%" r="189.110039%" gradientTransform="translate(0.500000,0.354911),scale(1.000000,0.160000),rotate(90.000000),scale(1.000000,0.965995),translate(-0.500000,-0.354911)" id="radialGradient-4">
+            <stop stop-color="#4F14CA" stop-opacity="0.866904438" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0.0917402627" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="7.47070312%" cy="-3.19986979%" fx="7.47070312%" fy="-3.19986979%" r="180.627404%" gradientTransform="translate(0.074707,-0.031999),scale(1.000000,0.160000),rotate(82.097300),scale(1.000000,1.321408),translate(-0.074707,0.031999)" id="radialGradient-5">
+            <stop stop-color="#3DB5FF" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#3CBDFC" stop-opacity="0.494569482" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <rect id="path-6" x="400" y="84" width="480" height="3000"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy-2" transform="translate(-400.000000, -84.000000)" fill-rule="nonzero">
+            <g id="Rectangle">
+                <use fill="url(#linearGradient-1)" xlink:href="#path-6"></use>
+                <use fill="url(#radialGradient-2)" xlink:href="#path-6"></use>
+                <use fill-opacity="0.9" fill="url(#radialGradient-3)" xlink:href="#path-6"></use>
+                <use fill="url(#radialGradient-4)" style="mix-blend-mode: multiply;" xlink:href="#path-6"></use>
+                <use fill="url(#radialGradient-5)" xlink:href="#path-6"></use>
+            </g>
+        </g>
+    </g>
+</svg>
