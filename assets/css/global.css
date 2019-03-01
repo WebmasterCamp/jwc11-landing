@@ -11,6 +11,13 @@ body {
 }
 
 .free-banner{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.free-border{
   border-radius: 12px;
   border: 2px solid #71C929;
   color: #71C929;
