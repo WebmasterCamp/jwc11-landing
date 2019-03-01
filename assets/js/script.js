@@ -96,11 +96,13 @@ function carousel(prevButton, nextButton) {
         status.onMove = false
         const dx = e.changedTouches[0].pageX - status.x
         status.x = 0
-        if (e.timeStamp - status.timeStamp > 100 && Math.abs(dx) > 40) {
-          if (dx > 0) {
-            prev()
-          } else {
-            next()
+        if (window.innerWidth < 576) {
+          if (e.timeStamp - status.timeStamp > 100 && Math.abs(dx) > 40) {
+            if (dx > 0) {
+              prev()
+            } else {
+              next()
+            }
           }
         }
         status.timeStamp = 0
@@ -294,4 +296,4 @@ function updateRegisteredUser() {
   })
 }
 
-updateRegisteredUser();
+updateRegisteredUser()
