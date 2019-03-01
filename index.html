@@ -146,10 +146,18 @@
           window.location.href.substring(window.location.protocol.length)
       }
     </script>
+    <style>
+    #particles-js{
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+    }
+    </style>
   </head>
 
   <body>
-    <div id="particles-js" style="position: fixed; width: 100vw; height: 100vh; z-index: -1;"></div>
+    <div id="particles-js"></div>
     <nav id="navbar">
       <div class="tablet-hide full-height flex-wrapper">
         <a class="navicon-button">
@@ -550,7 +558,7 @@
             <li class="question-item">
               <button class="question-text collapsible">
                 <i class="angle-down"></i>
-                <span style="font-family: 'Pridi', serif, Tahoma;">
+                <span class="font-pridi">
                   ทำเว็บไม่เป็น เข้าค่ายได้ไหม?
                 </span>
               </button>
@@ -565,7 +573,7 @@
             <li class="question-item">
               <button class="question-text collapsible">
                 <i class="angle-down"></i>
-                <span style="font-family: 'Pridi', serif, Tahoma;">
+                <span class="font-pridi">
                   ค่ายนี้รับสมัครกี่คน?
                 </span>
               </button>
@@ -581,7 +589,7 @@
             <li class="question-item">
               <button class="question-text collapsible">
                 <i class="angle-down"></i>
-                <span style="font-family: 'Pridi', serif, Tahoma;">
+                <span class="font-pridi">
                   เด็กปวช.สามารถสมัครได้มั้ย?
                 </span>
               </button>
@@ -595,7 +603,7 @@
             <li class="question-item">
               <button class="question-text collapsible">
                 <i class="angle-down"></i>
-                <span style="font-family: 'Pridi', serif, Tahoma;">
+                <span class="font-pridi">
                   ค้างคืนหรือเปล่า
                 </span>
               </button>
@@ -608,7 +616,7 @@
             <li class="question-item">
               <button class="question-text collapsible">
                 <i class="angle-down"></i>
-                <span style="font-family: 'Pridi', serif, Tahoma;">
+                <span class="font-pridi">
                   ทำไมต้องเก็บค่ามัดจำ
                 </span>
               </button>
@@ -622,7 +630,7 @@
             <li class="question-item">
               <button class="question-text collapsible">
                 <i class="angle-down"></i>
-                <span style="font-family: 'Pridi', serif, Tahoma;">
+                <span class="font-pridi">
                   ไม่มีเฟซบุ๊คสมัครได้มั้ย
                 </span>
               </button>
@@ -1094,7 +1102,7 @@
     <script
       async
       defer
-      src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2&appId=2112662722101314&autoLogAppEvents=1"
+      src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2&appId=1540852432838036&autoLogAppEvents=1"
     ></script>
     <script>
       var lazyLoadInstance = new LazyLoad({

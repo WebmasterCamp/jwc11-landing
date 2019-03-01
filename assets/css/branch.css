@@ -345,10 +345,11 @@
 @media screen and (min-width: 815px) and (max-width: 1077px) {
   .major-card {
     width: 197.25px;
+    height: 328px;
   }
 
   .side.front .content {
-    bottom: 28%;
+    bottom: 5%;
   }
 
   .side.back > .content p {
