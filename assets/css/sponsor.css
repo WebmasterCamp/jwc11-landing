@@ -279,7 +279,7 @@
 }
 
 .vip a {
-  flex: 0 0 25%;
+  flex: 0 0 20%;
   margin: 2%;
   display: flex;
   align-items: center;
@@ -315,12 +315,18 @@
 }
 
 .base-playhouse {
-  max-height: 120px;
+  max-height: 110px;
   width: auto !important;
 }
 
 @media screen and (max-width: 578px) {
   .base-playhouse {
-    max-height: 75px;
+    max-height: 60px;
   }
+}
+
+.iurban {
+  flex: 0 0 17%;
+  position: relative;
+  top: -5px;
 }
