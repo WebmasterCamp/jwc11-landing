@@ -284,6 +284,7 @@
   display: flex;
   align-items: center;
   max-width: 170px;
+  justify-content: center;
 }
 
 .platinum a {
@@ -326,7 +327,7 @@
 }
 
 .iurban {
-  flex: 0 0 17%;
+  flex: 0 0 16% !important;
   position: relative;
   top: -5px;
 }
