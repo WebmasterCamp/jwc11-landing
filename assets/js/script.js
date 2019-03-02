@@ -94,15 +94,16 @@ function carousel(prevButton, nextButton) {
     sw.addEventListener('touchend', e => {
       if (status.onMove) {
         status.onMove = false
-        const dx = e.changedTouches[0].pageX - status.x
+        const distanceX = e.changedTouches[0].pageX - status.x
         status.x = 0
-        if (window.innerWidth <= 576) {
-          if (e.timeStamp - status.timeStamp > 100 && Math.abs(dx) > 40) {
-            if (dx > 0) {
-              prev()
-            } else {
-              next()
-            }
+        const isMobileSize = window.innerWidth <= 576
+        const isSwipeIn100MilliSeconds = e.timeStamp - status.timeStamp > 100
+        const isDistanceMorethan40px = Math.abs(distanceX) > 40
+        if (isMobileSize && isSwipeIn100MilliSeconds && isDistanceMorethan40px) {
+          if (distanceX > 0) {
+            prev()
+          } else {
+            next()
           }
         }
         status.timeStamp = 0
@@ -239,17 +240,12 @@ Date.prototype.isAfter = function(anotherDate) {
   return this.getTime() > anotherDate.getTime()
 }
 
-var dummyDate = new Date(2019, 1, 1, 0, 0, 0, 0)
 var registerDate = new Date(2019, 3, 1, 0, 0, 0, 0)
 var announceDate = new Date(2019, 3, 24, 0, 0, 0, 0)
-var confirmDate = new Date(2019, 3, 25, 0, 0, 0, 0)
+var confirmDate = new Date(2019, 3, 24, 0, 0, 0, 0)
 var campDate = new Date(2019, 4, 5, 0, 0, 0, 0)
 var now = new Date()
 checkOrders = [
-  {
-    date: dummyDate,
-    element: 'timeline-register',
-  },
   {
     date: campDate,
     element: 'timeline-camp',
