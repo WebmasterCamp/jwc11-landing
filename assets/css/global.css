@@ -295,3 +295,7 @@ button {
 .margin-y-2-em {
   margin: 2em 0;
 }
+
+.min-height-auto {
+  min-height: auto;
+}
