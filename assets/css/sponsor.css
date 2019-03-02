@@ -313,3 +313,14 @@
 .image-fluid-inside img {
   width: 100%;
 }
+
+.base-playhouse {
+  max-height: 120px;
+  width: auto !important;
+}
+
+@media screen and (max-width: 578px) {
+  .base-playhouse {
+    max-height: 75px;
+  }
+}
