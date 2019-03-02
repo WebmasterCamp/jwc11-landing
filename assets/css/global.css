@@ -126,7 +126,7 @@ button {
 }
 
 .justify-content-center {
-  justify-content: center;
+  justify-content: center !important;
 }
 
 .justify-content-around {
