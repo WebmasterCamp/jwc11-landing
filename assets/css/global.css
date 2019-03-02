@@ -246,6 +246,10 @@ button {
   .justify-content-mobile-start {
     justify-content: flex-start !important;
   }
+
+  .top-left img {
+    width: 130px;
+  }
 }
 
 @media screen and (max-width: 800px) {
