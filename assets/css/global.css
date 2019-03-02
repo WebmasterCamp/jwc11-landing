@@ -10,17 +10,17 @@ body {
   overflow-x: hidden;
 }
 
-.free-banner{
+.free-banner {
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
 }
 
-.free-border{
+.free-border {
   border-radius: 12px;
-  border: 2px solid #71C929;
-  color: #71C929;
+  border: 2px solid #71c929;
+  color: #71c929;
   width: 250px;
   height: 50px;
   vertical-align: middle;
@@ -82,7 +82,7 @@ button {
 }
 
 @media screen and (max-width: 576px) {
-  .button{
+  .button {
     font-size: 20px;
   }
 }
@@ -211,6 +211,13 @@ button {
   padding-top: 80px;
   text-align: center;
   font-size: 2.5em;
+}
+
+.top-left {
+  position: fixed;
+  top: 20;
+  right: 0;
+  z-index: 555;
 }
 
 /* style on mobile size */
