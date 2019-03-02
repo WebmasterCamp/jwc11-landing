@@ -206,10 +206,10 @@ button {
 .section-title {
   background-size: cover;
   background-image: url('/assets/images/paper_board_edit.png');
-  width: 500px;
-  height: 150px;
+  width: 416px;
+  height: 126px;
+  padding-top: 80px;
   text-align: center;
-  padding-top: 104px;
   font-size: 2.5em;
 }
 
@@ -228,7 +228,6 @@ button {
     width: 270px;
     height: 75px;
     padding-top: 46px;
-    padding-top: 62px;
     font-size: 1.7em;
   }
 
@@ -295,4 +294,8 @@ button {
 
 .margin-y-2-em {
   margin: 2em 0;
+}
+
+.min-height-auto {
+  min-height: auto;
 }
