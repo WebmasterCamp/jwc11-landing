@@ -240,10 +240,10 @@ Date.prototype.isAfter = function(anotherDate) {
   return this.getTime() > anotherDate.getTime()
 }
 
-var registerDate = new Date(2019, 3, 1, 0, 0, 0, 0)
-var announceDate = new Date(2019, 3, 24, 0, 0, 0, 0)
-var confirmDate = new Date(2019, 3, 24, 0, 0, 0, 0)
-var campDate = new Date(2019, 4, 5, 0, 0, 0, 0)
+var registerDate = new Date('1 March 2019')
+var announceDate = new Date('24 March 2019')
+var confirmDate = new Date('24 March 2019')
+var campDate = new Date('5 April 2019')
 var now = new Date()
 checkOrders = [
   {
