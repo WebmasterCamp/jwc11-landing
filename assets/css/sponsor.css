@@ -271,7 +271,7 @@
 }
 
 .super-vip a {
-  flex: 0 0 30%;
+  flex: 0 0 26%;
   margin: 2%;
   display: flex;
   align-items: center;
@@ -299,7 +299,7 @@
   margin: 2%;
   display: flex;
   align-items: center;
-  max-width: 190px;
+  max-width: 260px;
 }
 
 .silver a {
