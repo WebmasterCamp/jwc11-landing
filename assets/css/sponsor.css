@@ -325,10 +325,15 @@
     max-height: 60px;
   }
   .iurban{
-    top: -7px !important;
+    top: -6px !important;
   }
 }
-@media screen and (max-width: 1900px) {
+@media screen and (min-width: 579px) and (max-width:770px) {
+  .iurban{
+    top: -4px !important;
+  }
+}
+@media screen and (min-width: 771px) {
   .iurban{
     top: -3px !important;
   }
