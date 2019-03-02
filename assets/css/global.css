@@ -167,7 +167,7 @@ button {
 }
 
 .mt-4 {
-  margin-top: 3rem;
+  margin-top: 3rem !important;
 }
 
 .mx-auto {
@@ -233,7 +233,7 @@ button {
 
   .section-title {
     width: 270px;
-    height: 75px;
+    height: 90px;
     padding-top: 46px;
     font-size: 1.7em;
   }
