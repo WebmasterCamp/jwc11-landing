@@ -217,7 +217,7 @@ button {
   position: fixed;
   top: 20;
   right: 0;
-  z-index: 555;
+  z-index: 490; /* should behide navbar */
 }
 
 /* style on mobile size */
