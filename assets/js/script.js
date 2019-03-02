@@ -239,17 +239,12 @@ Date.prototype.isAfter = function(anotherDate) {
   return this.getTime() > anotherDate.getTime()
 }
 
-var dummyDate = new Date(2019, 1, 1, 0, 0, 0, 0)
 var registerDate = new Date(2019, 3, 1, 0, 0, 0, 0)
 var announceDate = new Date(2019, 3, 24, 0, 0, 0, 0)
 var confirmDate = new Date(2019, 3, 25, 0, 0, 0, 0)
 var campDate = new Date(2019, 4, 5, 0, 0, 0, 0)
 var now = new Date()
 checkOrders = [
-  {
-    date: dummyDate,
-    element: 'timeline-register',
-  },
   {
     date: campDate,
     element: 'timeline-camp',
