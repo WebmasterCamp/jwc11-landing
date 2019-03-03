@@ -39,7 +39,7 @@
   width: 100%;
   background: white;
   border: 10px solid #ffbc5f;
-  min-height: 600px;
+  min-height: 500px;
   padding: 0.5em;
   box-sizing: border-box;
   display: flex;
@@ -64,9 +64,9 @@
 
 .media-partner-item {
   box-sizing: border-box;
-  width: 20%;
-  padding: 0 4px;
+  width: 18%;
   max-width: 100px;
+  margin: 0 1%;
 }
 
 .media-partner-item > img {
