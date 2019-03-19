@@ -64,9 +64,9 @@
 
 .media-partner-item {
   box-sizing: border-box;
-  width: 14%;
-  max-width: 70px;
-  margin: 0 2%;
+  width: 10%;
+  max-width: 60px;
+  margin: 4px 1%;
 }
 
 .media-partner-item > img {
