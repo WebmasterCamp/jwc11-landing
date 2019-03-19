@@ -260,7 +260,7 @@
 
 .super-vip a {
   flex: 0 0 26%;
-  margin: 2%;
+  margin: 4px 2%;
   display: flex;
   align-items: center;
   max-width: 200px;
@@ -268,7 +268,7 @@
 
 .vip a {
   flex: 0 0 20%;
-  margin: 2%;
+  margin: 4px 2%;
   display: flex;
   align-items: center;
   max-width: 170px;
@@ -277,7 +277,7 @@
 
 .platinum a {
   flex: 0 0 25%;
-  margin: 2%;
+  margin: 4px 2%;
   display: flex;
   align-items: center;
   max-width: 140px;
@@ -285,18 +285,22 @@
 
 .gold a {
   flex: 0 0 23%;
-  margin: 2%;
+  margin: 4px 2%;
   display: flex;
   align-items: center;
   max-width: 260px;
 }
 
 .silver a {
-  flex: 0 0 16%;
-  margin: 2%;
+  flex: 0 0 19%;
+  margin: 4px 4%;
   display: flex;
   align-items: center;
-  max-width: 180px;
+  max-width: 200px;
+}
+
+.silver {
+  justify-content: center!important;
 }
 
 .image-fluid-inside img {
