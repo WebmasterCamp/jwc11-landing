@@ -1,0 +1,1 @@
+#map-location{box-sizing:border-box;width:100%;height:450px;margin:0 auto;border:20px solid #000;border-image:url(/assets/images/large_frame.png) 20}@media screen and (max-width:576px){#map-location{height:400px}}.location-list{list-style:none}.location-list li:before{content:"\2022";color:#52abb7;font-weight:700;display:inline-block;width:1em;margin-left:-1em}
