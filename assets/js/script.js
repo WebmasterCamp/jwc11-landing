@@ -240,36 +240,48 @@ Date.prototype.isAfter = function(anotherDate) {
   return this.getTime() > anotherDate.getTime()
 }
 
-var registerDate = new Date('1 March 2019')
-var announceDate = new Date('24 March 2019')
-var confirmDate = new Date('24 March 2019')
-var campDate = new Date('5 April 2019')
+var registerStartDate = new Date('1 March 2019 GMT+0700')
+var registerEndDate = new Date('20 March 2019 23:59:59 GMT+0700')
+
+var announceStartDate = new Date('24 March 2019 GMT+0700')
+
+var confirmStartDate = new Date('24 March 2019 GMT+0700')
+var confirmEndDate = new Date('27 March 2019 23:59:59 GMT+0700')
+
+var campStartDate = new Date('6 April 2019 GMT+0700')
+var campEndDate = new Date('8 April 2019 23:59:59 GMT+0700')
+
 var now = new Date()
 checkOrders = [
   {
-    date: campDate,
+    start: campStartDate,
+    end: campEndDate,
     element: 'timeline-camp',
   },
   {
-    date: confirmDate,
+    start: confirmStartDate,
+    end: confirmEndDate,
     element: 'timeline-confirm',
   },
   {
-    date: announceDate,
+    start: announceStartDate,
+    end: announceStartDate,
     element: 'timeline-announce',
   },
   {
-    date: registerDate,
+    start: registerStartDate,
+    end: registerEndDate,
     element: 'timeline-register',
   },
 ]
 
 let active = true
 checkOrders.map(each => {
-  if (now.isAfter(each.date)) {
+  if (now.isAfter(each.start)) {
     let element = document.getElementById(each.element)
     element.querySelector('.timeline-icon').classList.add('active')
-    if (active) {
+    const isActiveEvent = !now.isAfter(each.end)
+    if (active && isActiveEvent) {
       element.firstElementChild.classList.add('active')
       active = false
     }
