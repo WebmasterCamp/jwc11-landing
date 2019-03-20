@@ -149,11 +149,14 @@
     <link rel="preload" href="/assets/js/script.min.js" as="script">
     <link rel="preload" href="/assets/js/polyfill.min.js" as="script">
     <script src="/assets/js/polyfill.min.js"></script>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" as="style" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css"
       rel="stylesheet"
     />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/vanilla-lazyload@11.0.2/dist/lazyload.min.js" as="script">
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@11.0.2/dist/lazyload.min.js"></script>
+    <link rel="preload" href="/assets/images/paper_board_edit.png" as="image">
     <script type="text/javascript">
       // automate redirect to https
       if (
@@ -1422,7 +1425,7 @@
                       >
                         <img
                           class="mt-2 image-fluid lazy"
-                          src="/assets/images/programming-question.JPG"
+                          data-src="/assets/images/programming-question.JPG"
                           alt="programming-question-3"
                         />
                       </a>
