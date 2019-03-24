@@ -455,8 +455,8 @@
         background: #f5f5f5;
         color: #223442;
         width: 90%;
-        margin: 0 auto;
-        padding: 0.5em 1em;
+        margin: 0 auto 120px auto;
+        padding: 1em 2em 2em 2em;
         border-radius: 15px;
       }
 
@@ -469,6 +469,26 @@
         height: 1px;
         margin: 2em auto;
         background-color: #e0e0e0;
+      }
+
+      .candidate-table {
+        border: #eeeeee 1px solid;
+        border-radius: 4px;
+      }
+
+      .candidate-table tr,td,th {
+        border-color: #eeeeee;
+        border-style: solid;
+        border-width: 0 0 1px 0;
+        border-collapse: collapse;
+      }
+
+      .candidate-table td,th {
+        padding: 12px;
+      }
+
+      .candidate-table tr:last-child td {
+        border-width: 0 0 0 0 ;
       }
     </style>
 
@@ -607,8 +627,8 @@
           จำนวนเงินตามที่ระบุในรายชื่อ ตัวอย่างเช่น 300.01 บาท
           <br />
           <br />
-          มาที่บัญชี XXXXXXXXXX <br />
-          ชื่อบัญชี __________ ธนาคาร__________
+          มาที่บัญชี 053-3-32654-4 <br />
+          ชื่อบัญชี นายวิชยุตม์ จงพัฒนสมบัติ ธนาคารกสิกรไทย
           <br /><br />
           * น้องจะได้รับเงินมัดจำคืนในวันสุดท้ายของค่าย วันที่ 8 เมษายน
           <br />
@@ -622,7 +642,7 @@
           <a href="">bit.ly/ahljsflhabsdfl</a>
           <br />
           <br />
-          ** หากเลยเวลาดังกล่าว ถือว่าเป็นการสละสิทธิ์ให้น้องที่เป็นตัวสำรองน
+          ** หากเลยเวลาดังกล่าว ถือว่าเป็นการสละสิทธิ์ให้น้องที่เป็นตัวสำรอง
         </li>
       </ol>
 
@@ -630,7 +650,7 @@
 
       <h4 class="text-center">รายชื่อตัวจริง</h4>
 
-      <table>
+      <table class="candidate-table">
         <thead>
           <th>รหัส</th>
           <th>ชื่อ - นามสกุล</th>
@@ -649,7 +669,7 @@
       <p class="text-center">
         หากมีน้องตัวจริงที่สละสิทธิ์ พี่ๆจะติดต่อไปหาน้องตามลำดับนะครับ T^T
       </p>
-      <table>
+      <table class="candidate-table">
         <thead>
           <th>รหัส</th>
           <th>ชื่อ - นามสกุล</th>
