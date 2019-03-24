@@ -243,9 +243,9 @@ Date.prototype.isAfter = function(anotherDate) {
 var registerStartDate = new Date('1 March 2019 GMT+0700')
 var registerEndDate = new Date('20 March 2019 23:59:59 GMT+0700')
 
-var announceStartDate = new Date('24 March 2019 GMT+0700')
+var announceStartDate = new Date('25 March 2019 GMT+0700')
 
-var confirmStartDate = new Date('24 March 2019 GMT+0700')
+var confirmStartDate = new Date('25 March 2019 GMT+0700')
 var confirmEndDate = new Date('27 March 2019 23:59:59 GMT+0700')
 
 var campStartDate = new Date('6 April 2019 GMT+0700')
