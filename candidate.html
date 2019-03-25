@@ -173,7 +173,7 @@
         background-position: top center;
         font-family: Pridi, serif, Tahoma;
         color: #fff;
-        font-size: 20px;
+        font-size: 1.2rem;
         overflow-x: hidden;
       }
 
@@ -234,6 +234,9 @@
       @media screen and (max-width: 576px) {
         .button {
           font-size: 20px;
+        }
+        body {
+          font-size: 1rem;
         }
       }
 
@@ -455,11 +458,16 @@
         background: #f5f5f5;
         color: #223442;
         width: 90%;
+        box-sizing: border-box;
         margin: 0 auto 120px auto;
         padding: 1em 2em 2em 2em;
         border-radius: 15px;
       }
-
+      @media screen and (max-width: 576px) {
+        #candidate-box {
+          padding: 1em 1em 2em 1em;
+        }
+      }
       ol {
         font-weight: 300;
       }
@@ -476,19 +484,22 @@
         border-radius: 4px;
       }
 
-      .candidate-table tr,td,th {
+      .candidate-table tr,
+      td,
+      th {
         border-color: #eeeeee;
         border-style: solid;
         border-width: 0 0 1px 0;
         border-collapse: collapse;
       }
 
-      .candidate-table td,th {
+      .candidate-table td,
+      th {
         padding: 12px;
       }
 
       .candidate-table tr:last-child td {
-        border-width: 0 0 0 0 ;
+        border-width: 0 0 0 0;
       }
     </style>
 
@@ -531,7 +542,8 @@
 
       table {
         background-color: #fff;
-        width: 80%;
+        width: 100%;
+        max-width: 700px;
         margin: 0 auto;
       }
 
@@ -644,7 +656,7 @@
           เพื่อยืนยันสิทธิ์<b>ภายในวันที่ 27 มีนาคม เวลา 23:59</b> ทางลิงก์นี้
           <br />
           <br />
-          <a href="http://bit.ly/2JC6SU">ยืนยันตันที่นี่</a>
+          <a href="http://bit.ly/2JC6SU">ยืนยันสิทธิ์ที่นี่</a>
           <br />
           <br />
           ** หากเลยเวลาดังกล่าว ถือว่าเป็นการสละสิทธิ์ให้น้องที่เป็นตัวสำรอง
@@ -654,38 +666,41 @@
       <div class="end-section"></div>
 
       <h4 class="text-center">รายชื่อตัวจริง</h4>
-
-      <table class="candidate-table">
-        <thead>
-          <th>รหัส</th>
-          <th>ชื่อ - นามสกุล</th>
-          <th></th>
-        </thead>
-        <tbody id="real">
-          <tr>
-            <td>DS01</td>
-            <td>รวัส จันทร์สัจจา</td>
-            <td><b>จำนวนเงิน</b> 300.01</td>
-          </tr>
-        </tbody>
-      </table>
+      <div style="overflow: auto;">
+        <table class="candidate-table">
+          <thead>
+            <th>รหัส</th>
+            <th>ชื่อ - นามสกุล</th>
+            <th style="text-align: right;">จำนวนเงิน</th>
+          </thead>
+          <tbody id="real">
+            <tr>
+              <td>DS01</td>
+              <td>รวัส จันทร์สัจจา</td>
+              <td><b>จำนวนเงิน</b> 300.01</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <h4 class="text-center">รายชื่อตัวสำรอง</h4>
       <p class="text-center">
         หากมีน้องตัวจริงที่สละสิทธิ์ พี่ๆจะติดต่อไปหาน้องตามลำดับนะครับ T^T
       </p>
-      <table class="candidate-table">
-        <thead>
-          <th>รหัส</th>
-          <th>ชื่อ - นามสกุล</th>
-        </thead>
-        <tbody id="waitlist">
-          <tr>
-            <td>1</td>
-            <td>รวัส จันทร์สัจจา</td>
-          </tr>
-        </tbody>
-      </table>
+      <div style="overflow: auto;">
+        <table class="candidate-table">
+          <thead>
+            <th>รหัส</th>
+            <th>ชื่อ - นามสกุล</th>
+          </thead>
+          <tbody id="waitlist">
+            <tr>
+              <td>1</td>
+              <td>รวัส จันทร์สัจจา</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <script src="/assets/js/particles.min.js"></script>
@@ -747,15 +762,19 @@
           }
 
           real[hash].forEach(n => {
-            var html = `<tr><td>${prefix}${n.id}</td><td>${
-              n.name
-            }</td><td><b>จำนวนเงิน<b> ${n.amount}</td></tr>`
+            var html = `<tr><td>${prefix}${n.id}</td><td>${n.name
+              .split(' ')
+              .map(e => `<span style="white-space: nowrap;">${e}</span>`)
+              .join(' ')}</td><td><b>${n.amount}</b></td></tr>`
 
             $('#real').append(html)
           })
 
           waitlist[hash].forEach(n => {
-            var html = `<tr><td>${n.id}</td><td>${n.name}</td></tr>`
+            var html = `<tr><td>${n.id}</td><td>${n.name
+              .split(' ')
+              .map(e => `<span style="white-space: nowrap;">${e}</span>`)
+              .join(' ')}</td></tr>`
 
             $('#waitlist').append(html)
           })
@@ -1129,7 +1148,11 @@
         $('#' + hash).addClass('active')
 
         setTable(hash)
-
+        if (hash) {
+          $('#mobile-major').text(
+            hash.slice(0, 1).toUpperCase() + hash.slice(1),
+          )
+        }
         // Add smooth scrolling to all links
         $('a').on('click', function(event) {
           // Make sure this.hash has a value before overriding default behavior
