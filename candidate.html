@@ -751,18 +751,10 @@
           ** หากเลยเวลาดังกล่าว ถือว่าเป็นการสละสิทธิ์ให้น้องที่เป็นตัวสำรอง
         </li>
       </ol>
-      <div align="center">
-        <a
-          href="https://goo.gl/forms/1S79p3CMNHddCv3M2"
-          target="_blank"
-          class="confirm-button animated pulse infinite box-shadow"
-          >ยืนยันสิทธิ์ที่นี่</a
-        >
-      </div>
 
       <div class="end-section"></div>
 
-      <h4 class="text-center">รายชื่อตัวจริง</h4>
+      <h4 class="text-center">รายชื่อตัวจริง <span id="major"></span></h4>
       <div style="overflow: auto;">
         <table class="candidate-table">
           <thead>
@@ -770,11 +762,17 @@
             <th>ชื่อ - นามสกุล</th>
             <th style="text-align: right;">จำนวนเงิน</th>
           </thead>
-          <tbody id="real">
-          </tbody>
+          <tbody id="real"></tbody>
         </table>
       </div>
-
+      <div align="center" style="margin: 2em 0">
+        <a
+          href="https://goo.gl/forms/1S79p3CMNHddCv3M2"
+          target="_blank"
+          class="confirm-button animated pulse infinite box-shadow"
+          >ยืนยันสิทธิ์ที่นี่</a
+        >
+      </div>
       <h4 class="text-center">รายชื่อตัวสำรอง</h4>
       <p class="text-center">
         หากมีน้องตัวจริงที่สละสิทธิ์ พี่ๆจะติดต่อไปหาน้องตามลำดับนะครับ T^T
@@ -785,8 +783,7 @@
             <th>รหัส</th>
             <th>ชื่อ - นามสกุล</th>
           </thead>
-          <tbody id="waitlist">
-          </tbody>
+          <tbody id="waitlist"></tbody>
         </table>
       </div>
     </div>
@@ -856,20 +853,22 @@
             prefix = 'MK'
             base = 0.25
           }
-
+          $('#major').html(hash[0].toUpperCase()+hash.slice(1) || 'Design')
           real[hash]
             .sort((a, b) => a.name > b.name)
             .forEach((n, i) => {
               var html = `<tr><td>${prefix}${i + 1}</td><td>${n.name
                 .split(' ')
                 .map(e => `<span style="white-space: nowrap;">${e}</span>`)
-                .join(' ')}</td><td><b>${(300 + base + i / 100).toFixed(2)}</b></td></tr>`
+                .join(' ')}</td><td><b>${(300 + base + i / 100).toFixed(
+                2,
+              )}</b></td></tr>`
 
               $('#real').append(html)
             })
 
-          waitlist[hash].forEach((n,i) => {
-            var html = `<tr><td>${i+1}</td><td>${n.name
+          waitlist[hash].forEach((n, i) => {
+            var html = `<tr><td>${i + 1}</td><td>${n.name
               .split(' ')
               .map(e => `<span style="white-space: nowrap;">${e}</span>`)
               .join(' ')}</td></tr>`
@@ -1131,7 +1130,7 @@
 
         var waitlist = {
           design: [
-          {
+            {
               id: 5,
               name: 'รัฐศาสตร์ วงศ์ณรัตน์',
               amount: '300.05',
