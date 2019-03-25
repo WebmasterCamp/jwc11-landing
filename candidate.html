@@ -580,6 +580,87 @@
           font-size: 0.8em;
         }
       }
+
+      .confirm-button {
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        font-size: 22px;
+        letter-spacing: 0.04em;
+        border-radius: 25px;
+        padding: 0.3em 1em;
+        color: #fff;
+        background: #e1a34e;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .confirm-button > span {
+        white-space: nowrap;
+      }
+
+      @media screen and (max-width: 576px) {
+        .confirm-button {
+          font-size: 20px;
+        }
+      }
+      @keyframes pulse {
+      }
+
+      .animated {
+        -webkit-animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+      }
+
+      .animated.infinite {
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+      }
+
+      @-webkit-keyframes pulse {
+        from {
+          -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+        }
+
+        50% {
+          -webkit-transform: scale3d(1.05, 1.05, 1.05);
+          transform: scale3d(1.05, 1.05, 1.05);
+        }
+
+        to {
+          -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+        }
+      }
+
+      @keyframes pulse {
+        from {
+          -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+        }
+
+        50% {
+          -webkit-transform: scale3d(1.05, 1.05, 1.05);
+          transform: scale3d(1.05, 1.05, 1.05);
+        }
+
+        to {
+          -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+        }
+      }
+
+      .pulse {
+        -webkit-animation-name: pulse;
+        animation-name: pulse;
+      }
+
+      .box-shadow {
+        box-shadow: 0 0 35px #fff;
+      }
     </style>
     <!-- Facebook Pixel Code -->
     <script>
@@ -665,15 +746,19 @@
         </li>
         <li>
           อัพโหลด<b>หลักฐานการโอนเงิน</b> (รูปถ่าย หรือ ไฟล์)
-          เพื่อยืนยันสิทธิ์<b>ภายในวันที่ 27 มีนาคม 2562 เวลา 23:59</b> ทางลิงก์นี้
-          <br />
-          <br />
-          <a href="https://goo.gl/forms/1S79p3CMNHddCv3M2" target="_blank">ยืนยันสิทธิ์ที่นี่</a>
-          <br />
-          <br />
+          เพื่อยืนยันสิทธิ์<b>ภายในวันที่ 27 มีนาคม 2562 เวลา 23:59</b>
+          <br>
           ** หากเลยเวลาดังกล่าว ถือว่าเป็นการสละสิทธิ์ให้น้องที่เป็นตัวสำรอง
         </li>
       </ol>
+      <div align="center">
+        <a
+          href="https://goo.gl/forms/1S79p3CMNHddCv3M2"
+          target="_blank"
+          class="confirm-button animated pulse infinite box-shadow"
+          >ยืนยันสิทธิ์ที่นี่</a
+        >
+      </div>
 
       <div class="end-section"></div>
 
