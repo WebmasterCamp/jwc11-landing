@@ -522,6 +522,11 @@
         text-align: left;
       }
 
+      tr {
+        padding: 20px 0;
+        border-bottom: 3px black solid;
+      }
+
       td:nth-child(3) {
         text-align: right;
         font-weight: 200;
@@ -619,7 +624,7 @@
           เพื่อยืนยันสิทธิ์<b>ภายในวันที่ 27 มีนาคม เวลา 23:59</b> ทางลิงก์นี้
           <br />
           <br />
-          <a href="">bit.ly/ahljsflhabsdfl</a>
+          <a href="http://bit.ly/2JC6SU">bit.ly/2JC6SU</a>
           <br />
           <br />
           ** หากเลยเวลาดังกล่าว ถือว่าเป็นการสละสิทธิ์ให้น้องที่เป็นตัวสำรองน
@@ -703,8 +708,26 @@
           $('#real').empty()
           $('#waitlist').empty()
 
+          let prefix
+
+          if (hash === 'content') {
+            prefix = 'CT'
+          }
+
+          if (hash === 'programming') {
+            prefix = 'PG'
+          }
+
+          if (hash === 'design') {
+            prefix = 'DS'
+          }
+
+          if (hash === 'marketing') {
+            prefix = 'MK'
+          }
+
           real[hash].forEach(n => {
-            var html = `<tr><td>${n.code}</td><td>${
+            var html = `<tr><td>${prefix}${n.id}</td><td>${
               n.name
             }</td><td><b>จำนวนเงิน<b> ${n.amount}</td></tr>`
 
@@ -712,78 +735,381 @@
           })
 
           waitlist[hash].forEach(n => {
-            var html = `<tr><td>${n.code}</td><td>${n.name}</td></tr>`
+            var html = `<tr><td>${n.id}</td><td>${n.name}</td></tr>`
 
             $('#waitlist').append(html)
           })
         }
 
         var real = {
-          programming: [
-            {
-              code: 'PG01',
-              name: 'lel lel',
-              amount: '300.01',
-            },
-            {
-              code: 'PG02',
-              name: 'lel sflkhslgkhdsglkj',
-              amount: '300.02',
-            },
-          ],
           design: [
             {
-              code: 'DS01',
-              name: 'lel lel',
+              id: 1,
+              name: 'ชนกวนัน เชิง​ขุน​ทด​',
               amount: '300.01',
             },
-          ],
-          content: [
             {
-              code: 'CN01',
-              name: 'lel lel',
-              amount: '300.01',
+              id: 2,
+              name: 'ฌาณัฐย์ สิทธิปรีดานันท์',
+              amount: '300.02',
+            },
+            {
+              id: 3,
+              name: 'ฐิติกานต์ พุทธินันท์',
+              amount: '300.03',
+            },
+            {
+              id: 4,
+              name: 'ณาฌา หิรัญญการ',
+              amount: '300.04',
+            },
+            {
+              id: 5,
+              name: 'ทิตเมธา ฐานานุวัฒน์',
+              amount: '300.05',
+            },
+            {
+              id: 6,
+              name: 'ธนบูรณ์ ทรัพย์มนตรี',
+              amount: '300.06',
+            },
+            {
+              id: 7,
+              name: 'ธีริศรา ยิ้มปั่น',
+              amount: '300.07',
+            },
+            {
+              id: 8,
+              name: 'นฤบดินทร์ ดาวเรือง',
+              amount: '300.08',
+            },
+            {
+              id: 9,
+              name: 'นายวีรภัทร์ ฐิระพิทักษ์พงศา',
+              amount: '300.09',
+            },
+            {
+              id: 10,
+              name: 'น้ำมนต์ ลิขิตธรรมรักษ์์',
+              amount: '300.10',
+            },
+            {
+              id: 11,
+              name: 'ลีโอณิช เช็ง',
+              amount: '300.11',
+            },
+            {
+              id: 12,
+              name: 'ศราวลี ศรีศรากร',
+              amount: '300.12',
             },
           ],
           marketing: [
             {
-              code: 'MK01',
-              name: 'lel lel',
-              amount: '300.01',
+              id: 1,
+              name: 'กันตพัฒน์ สุวรรณหงษ์',
+              amount: '300.13',
+            },
+            {
+              id: 2,
+              name: 'คณาพร เกิดกลิ่นหอม',
+              amount: '300.14',
+            },
+            {
+              id: 3,
+              name: 'ชนากานต์​ สุวรรณสิน​พันธุ์​',
+              amount: '300.15',
+            },
+            {
+              id: 4,
+              name: 'ชนิสรา กิจศรีโสภณ',
+              amount: '300.16',
+            },
+            {
+              id: 5,
+              name: 'นภัส นิติวัฒนานนท์',
+              amount: '300.17',
+            },
+            {
+              id: 6,
+              name: 'นรมน อิทธิวัฒนสกุล',
+              amount: '300.18',
+            },
+            {
+              id: 7,
+              name: 'ปวริศร์ ปั้นอุดม',
+              amount: '300.19',
+            },
+            {
+              id: 8,
+              name: 'พรทิพย์ ชื่นสมานศรี',
+              amount: '300.20',
+            },
+            {
+              id: 9,
+              name: 'พิริยะ ตระกูลฮุน',
+              amount: '300.21',
+            },
+            {
+              id: 10,
+              name: 'เพ็ญพิมพ์ จิระจรัส',
+              amount: '300.22',
+            },
+            {
+              id: 11,
+              name: 'ภูชิต ขวัญดี',
+              amount: '300.23',
+            },
+            {
+              id: 12,
+              name: 'ลักขณา เลิศวัฒน์ธนกุล',
+              amount: '300.24',
+            },
+          ],
+          content: [
+            {
+              id: 1,
+              name: 'กัลยรัตน์ ปวนกาศ',
+              amount: '300.25',
+            },
+            {
+              id: 2,
+              name: 'ชิตพล แพงเวียงจันทร์',
+              amount: '300.26',
+            },
+            {
+              id: 3,
+              name: 'เตชินท์ เตชินท์ธนนันต์',
+              amount: '300.27',
+            },
+            {
+              id: 4,
+              name: 'นัทพงศ์ ศักดิ์เจริญ',
+              amount: '300.28',
+            },
+            {
+              id: 5,
+              name: 'ปัณณธร อภิธนวิทย์',
+              amount: '300.29',
+            },
+            {
+              id: 6,
+              name: 'ปิยมน พิมพ์ชัย',
+              amount: '300.30',
+            },
+            {
+              id: 7,
+              name: 'ภาลินี ชูช่วย',
+              amount: '300.31',
+            },
+            {
+              id: 8,
+              name: 'รติมา บุญจิรโชติ',
+              amount: '300.32',
+            },
+            {
+              id: 9,
+              name: 'ศุภกร วีระเพ็ชร์',
+              amount: '300.33',
+            },
+            {
+              id: 10,
+              name: 'สิรวิชญ์ รวีไพฑูรย์',
+              amount: '300.34',
+            },
+            {
+              id: 11,
+              name: 'สุพิชฌาย์ วรรณเชฐอิสรา',
+              amount: '300.35',
+            },
+            {
+              id: 12,
+              name: 'อิษฎาอร กุลแสนเต่า',
+              amount: '300.36',
+            },
+          ],
+          programming: [
+            {
+              id: 1,
+              name: 'จารุกิตติ์  จินตนะสถิระกุล',
+              amount: '300.37',
+            },
+            {
+              id: 2,
+              name: 'ชยางกูร สอนเสนา',
+              amount: '300.38',
+            },
+            {
+              id: 3,
+              name: 'ฐานสิทธิ์ สุวรรณโพธิ์ศรี',
+              amount: '300.39',
+            },
+            {
+              id: 4,
+              name: 'ทรงพล อนันต์เนติกุล',
+              amount: '300.40',
+            },
+            {
+              id: 5,
+              name: 'ธนโชติ วงศ์เมธิญญ์',
+              amount: '300.41',
+            },
+            {
+              id: 6,
+              name: 'นายพนธกร แพแสง',
+              amount: '300.42',
+            },
+            {
+              id: 7,
+              name: 'พลวัต สุภารัตน์',
+              amount: '300.43',
+            },
+            {
+              id: 8,
+              name: 'พศวัต สุขใส',
+              amount: '300.44',
+            },
+            {
+              id: 9,
+              name: 'ศักย์ศิลกาล เพชรกุลจินดา',
+              amount: '300.45',
+            },
+            {
+              id: 10,
+              name: 'ศุภกานต์ เหล่ารัตนกุล',
+              amount: '300.46',
+            },
+            {
+              id: 11,
+              name: 'สุภณ ธนกรภคพงศ์',
+              amount: '300.47',
+            },
+            {
+              id: 12,
+              name: 'อภิสิทธิ์ ลิขิตวัฒนไพศาล',
+              amount: '300.48',
             },
           ],
         }
 
         var waitlist = {
-          programming: [
-            {
-              code: '1',
-              name: 'lel lel',
-            },
-          ],
           design: [
             {
-              code: '1',
-              name: 'lel lel',
+              id: 1,
+              name: 'กวินทิพย์ จันทร์ทิปะ',
+              amount: '300.01',
             },
-          ],
-          content: [
             {
-              code: '1',
-              name: 'lel lel',
+              id: 2,
+              name: 'ณัฐชญา ชาชุมวงศ์',
+              amount: '300.02',
+            },
+            {
+              id: 3,
+              name: 'ธีรดา จึงธีรพานิช',
+              amount: '300.03',
+            },
+            {
+              id: 4,
+              name: 'ปุรเชษฐ์ พันธ์ผูก',
+              amount: '300.04',
+            },
+            {
+              id: 5,
+              name: 'รัฐศาสตร์ วงศ์ณรัตน์',
+              amount: '300.05',
             },
           ],
           marketing: [
             {
-              code: '1',
-              name: 'lel lel',
+              id: 1,
+              name: 'ชัยมงคล สีสินโท',
+              amount: '300.13',
+            },
+            {
+              id: 2,
+              name: 'ณัฐชนน เทวะวโรดม',
+              amount: '300.14',
+            },
+            {
+              id: 3,
+              name: 'ปัณณ์ กลแกม',
+              amount: '300.15',
+            },
+            {
+              id: 4,
+              name: 'พิมพ์พิชชา หาญอติชาติ',
+              amount: '300.16',
+            },
+            {
+              id: 5,
+              name: 'วริศรา สู่สุข',
+              amount: '300.17',
+            },
+          ],
+          content: [
+            {
+              id: 1,
+              name: 'พงศ์ไพสิฐ คนชาญ',
+              amount: '300.25',
+            },
+            {
+              id: 2,
+              name: 'มนฑกานต์ พันธุ์ชื่น',
+              amount: '300.26',
+            },
+            {
+              id: 3,
+              name: 'ศาตนันท์ แววสีงาม',
+              amount: '300.27',
+            },
+            {
+              id: 4,
+              name: 'ศิริพงศ์ ศรีคํา',
+              amount: '300.28',
+            },
+            {
+              id: 5,
+              name: 'สรณ์สิริ  กาญจนาวิล',
+              amount: '300.29',
+            },
+          ],
+          programming: [
+            {
+              id: 1,
+              name: 'กรสกล ดำรงค์กุลนิช',
+              amount: '300.37',
+            },
+            {
+              id: 2,
+              name: 'กีรติ ชุมประมาณ',
+              amount: '300.38',
+            },
+            {
+              id: 3,
+              name: 'ณัฐนันท์ จันทวงศ์',
+              amount: '300.39',
+            },
+            {
+              id: 4,
+              name: 'เดชาธร เทวะผลิน',
+              amount: '300.40',
+            },
+            {
+              id: 5,
+              name: 'สิปปกร อรวิเชียร',
+              amount: '300.41',
             },
           ],
         }
 
-        setTable('design')
+        var hash = window.location.hash.slice(1) || 'design'
 
-        var hash = 'design'
+        $('#design').removeClass('active')
+        $('#' + hash).addClass('active')
+
+        setTable(hash)
+
         // Add smooth scrolling to all links
         $('a').on('click', function(event) {
           // Make sure this.hash has a value before overriding default behavior
@@ -791,7 +1117,7 @@
             // Prevent default anchor click behavior
             event.preventDefault()
 
-            var prev = hash
+            prev = hash
             // Store hash
             hash = this.hash.slice(1)
 
