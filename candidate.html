@@ -747,7 +747,7 @@
         <li>
           อัพโหลด<b>หลักฐานการโอนเงิน</b> (รูปถ่าย หรือ ไฟล์)
           เพื่อยืนยันสิทธิ์<b>ภายในวันที่ 27 มีนาคม 2562 เวลา 23:59</b>
-          <br>
+          <br />
           ** หากเลยเวลาดังกล่าว ถือว่าเป็นการสละสิทธิ์ให้น้องที่เป็นตัวสำรอง
         </li>
       </ol>
@@ -771,11 +771,6 @@
             <th style="text-align: right;">จำนวนเงิน</th>
           </thead>
           <tbody id="real">
-            <tr>
-              <td>DS01</td>
-              <td>รวัส จันทร์สัจจา</td>
-              <td><b>จำนวนเงิน</b> 300.01</td>
-            </tr>
           </tbody>
         </table>
       </div>
@@ -791,10 +786,6 @@
             <th>ชื่อ - นามสกุล</th>
           </thead>
           <tbody id="waitlist">
-            <tr>
-              <td>1</td>
-              <td>รวัส จันทร์สัจจา</td>
-            </tr>
           </tbody>
         </table>
       </div>
@@ -845,31 +836,37 @@
           )
 
           let prefix
-
+          let base
           if (hash === 'content') {
             prefix = 'CT'
+            base = 0.13
           }
 
           if (hash === 'programming') {
             prefix = 'PG'
+            base = 0.37
           }
 
           if (hash === 'design') {
             prefix = 'DS'
+            base = 0.01
           }
 
           if (hash === 'marketing') {
             prefix = 'MK'
+            base = 0.25
           }
 
-          real[hash].forEach(n => {
-            var html = `<tr><td>${prefix}${n.id}</td><td>${n.name
-              .split(' ')
-              .map(e => `<span style="white-space: nowrap;">${e}</span>`)
-              .join(' ')}</td><td><b>${n.amount}</b></td></tr>`
+          real[hash]
+            .sort((a, b) => a.name > b.name)
+            .forEach((n, i) => {
+              var html = `<tr><td>${prefix}${i + 1}</td><td>${n.name
+                .split(' ')
+                .map(e => `<span style="white-space: nowrap;">${e}</span>`)
+                .join(' ')}</td><td><b>${(300 + base + i / 100).toFixed(2)}</b></td></tr>`
 
-            $('#real').append(html)
-          })
+              $('#real').append(html)
+            })
 
           waitlist[hash].forEach(n => {
             var html = `<tr><td>${n.id}</td><td>${n.name
@@ -925,7 +922,7 @@
             },
             {
               id: 9,
-              name: 'นายวีรภัทร์ ฐิระพิทักษ์พงศา',
+              name: 'วีรภัทร์ ฐิระพิทักษ์พงศา',
               amount: '300.09',
             },
             {
