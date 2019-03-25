@@ -556,6 +556,18 @@
       #mobile-major {
         line-height: 50px;
       }
+
+      @media screen and (max-width: 576px) {
+        #candidate-box {
+          width: calc(100% - 2em);
+          padding: 1em;
+        }
+
+        td,
+        th {
+          font-size: 0.8em;
+        }
+      }
     </style>
     <!-- Facebook Pixel Code -->
     <script>
@@ -727,6 +739,10 @@
         function setTable(hash) {
           $('#real').empty()
           $('#waitlist').empty()
+
+          $('#mobile-major').text(
+            hash.slice(0, 1).toUpperCase() + hash.slice(1),
+          )
 
           let prefix
 
@@ -1143,9 +1159,6 @@
 
             $('#' + prev).removeClass('active')
             $('#' + hash).addClass('active')
-            $('#mobile-major').text(
-              hash.slice(0, 1).toUpperCase() + hash.slice(1),
-            )
 
             setTable(hash)
 
