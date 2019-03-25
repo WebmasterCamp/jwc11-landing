@@ -855,14 +855,12 @@
           }
           $('#major').html(hash[0].toUpperCase()+hash.slice(1) || 'Design')
           real[hash]
-            .sort((a, b) => a.name > b.name)
-            .forEach((n, i) => {
-              var html = `<tr><td>${prefix}${i + 1}</td><td>${n.name
+            .forEach((n) => {
+              var html = `<tr><td>${prefix}${n.id}</td><td>${n.name
                 .split(' ')
                 .map(e => `<span style="white-space: nowrap;">${e}</span>`)
-                .join(' ')}</td><td><b>${(300 + base + i / 100).toFixed(
-                2,
-              )}</b></td></tr>`
+                .join(' ')}</td><td><b>${ n.amount
+              }</b></td></tr>`
 
               $('#real').append(html)
             })
@@ -944,124 +942,124 @@
             {
               id: 1,
               name: 'กันตพัฒน์ สุวรรณหงษ์',
-              amount: '300.13',
+              amount: '300.25',
             },
             {
               id: 2,
               name: 'คณาพร เกิดกลิ่นหอม',
-              amount: '300.14',
+              amount: '300.26',
             },
             {
               id: 3,
               name: 'ชนากานต์​ สุวรรณสิน​พันธุ์​',
-              amount: '300.15',
+              amount: '300.27',
             },
             {
               id: 4,
               name: 'ชนิสรา กิจศรีโสภณ',
-              amount: '300.16',
+              amount: '300.28',
             },
             {
               id: 5,
               name: 'นภัส นิติวัฒนานนท์',
-              amount: '300.17',
+              amount: '300.29',
             },
             {
               id: 6,
               name: 'นรมน อิทธิวัฒนสกุล',
-              amount: '300.18',
+              amount: '300.30',
             },
             {
               id: 7,
               name: 'ปวริศร์ ปั้นอุดม',
-              amount: '300.19',
+              amount: '300.31',
             },
             {
               id: 8,
               name: 'พรทิพย์ ชื่นสมานศรี',
-              amount: '300.20',
+              amount: '300.32',
             },
             {
               id: 9,
               name: 'พิริยะ ตระกูลฮุน',
-              amount: '300.21',
+              amount: '300.33',
             },
             {
               id: 10,
               name: 'เพ็ญพิมพ์ จิระจรัส',
-              amount: '300.22',
+              amount: '300.34',
             },
             {
               id: 11,
               name: 'ภูชิต ขวัญดี',
-              amount: '300.23',
+              amount: '300.35',
             },
             {
               id: 12,
               name: 'ลักขณา เลิศวัฒน์ธนกุล',
-              amount: '300.24',
+              amount: '300.36',
             },
           ],
           content: [
             {
               id: 1,
               name: 'กัลยรัตน์ ปวนกาศ',
-              amount: '300.25',
+              amount: '300.13',
             },
             {
               id: 2,
               name: 'ชิตพล แพงเวียงจันทร์',
-              amount: '300.26',
+              amount: '300.14',
             },
             {
               id: 3,
               name: 'เตชินท์ เตชินท์ธนนันต์',
-              amount: '300.27',
+              amount: '300.15',
             },
             {
               id: 4,
               name: 'นัทพงศ์ ศักดิ์เจริญ',
-              amount: '300.28',
+              amount: '300.16',
             },
             {
               id: 5,
               name: 'ปัณณธร อภิธนวิทย์',
-              amount: '300.29',
+              amount: '300.17',
             },
             {
               id: 6,
               name: 'ปิยมน พิมพ์ชัย',
-              amount: '300.30',
+              amount: '300.18',
             },
             {
               id: 7,
               name: 'ภาลินี ชูช่วย',
-              amount: '300.31',
+              amount: '300.19',
             },
             {
               id: 8,
               name: 'รติมา บุญจิรโชติ',
-              amount: '300.32',
+              amount: '300.20',
             },
             {
               id: 9,
               name: 'ศุภกร วีระเพ็ชร์',
-              amount: '300.33',
+              amount: '300.21',
             },
             {
               id: 10,
               name: 'สิรวิชญ์ รวีไพฑูรย์',
-              amount: '300.34',
+              amount: '300.22',
             },
             {
               id: 11,
               name: 'สุพิชฌาย์ วรรณเชฐอิสรา',
-              amount: '300.35',
+              amount: '300.23',
             },
             {
               id: 12,
               name: 'อิษฎาอร กุลแสนเต่า',
-              amount: '300.36',
+              amount: '300.24',
             },
           ],
           programming: [
