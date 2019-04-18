@@ -110,17 +110,312 @@
     <link rel="icon" type="image/x-icon" href="/logo/favicon.ico" />
 
     <!-- Code snippet to speed up Google Fonts rendering: googlefonts.3perf.com -->
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Pridi" as="fetch" crossorigin="anonymous">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Pridi"
+      as="fetch"
+      crossorigin="anonymous"
+    />
     <script type="text/javascript">
-    !function(e,n,t){"use strict";var o="https://fonts.googleapis.com/css?family=Pridi",r="__3perf_googleFontsStylesheet";function c(e){(n.head||n.body).appendChild(e)}function a(){var e=n.createElement("link");e.href=o,e.rel="stylesheet",c(e)}function f(e){if(!n.getElementById(r)){var t=n.createElement("style");t.id=r,c(t)}n.getElementById(r).innerHTML=e}e.FontFace&&e.FontFace.prototype.hasOwnProperty("display")?(t[r]&&f(t[r]),fetch(o).then(function(e){return e.text()}).then(function(e){return e.replace(/@font-face {/g,"@font-face{font-display:swap;")}).then(function(e){return t[r]=e}).then(f).catch(a)):a()}(window,document,localStorage);
+      !(function(e, n, t) {
+        'use strict'
+        var o = 'https://fonts.googleapis.com/css?family=Pridi',
+          r = '__3perf_googleFontsStylesheet'
+        function c(e) {
+          ;(n.head || n.body).appendChild(e)
+        }
+        function a() {
+          var e = n.createElement('link')
+          ;(e.href = o), (e.rel = 'stylesheet'), c(e)
+        }
+        function f(e) {
+          if (!n.getElementById(r)) {
+            var t = n.createElement('style')
+            ;(t.id = r), c(t)
+          }
+          n.getElementById(r).innerHTML = e
+        }
+        e.FontFace && e.FontFace.prototype.hasOwnProperty('display')
+          ? (t[r] && f(t[r]),
+            fetch(o)
+              .then(function(e) {
+                return e.text()
+              })
+              .then(function(e) {
+                return e.replace(
+                  /@font-face {/g,
+                  '@font-face{font-display:swap;',
+                )
+              })
+              .then(function(e) {
+                return (t[r] = e)
+              })
+              .then(f)
+              .catch(a))
+          : a()
+      })(window, document, localStorage)
     </script>
     <!-- End of code snippet for Google Fonts -->
 
     <!-- CSS -->
     <style>
-      body{margin:0;background-color:#222542;background-image:url(/assets/images/bgjwc.svg);background-size:cover;background-position:top center;font-family:Pridi,serif,Tahoma;color:#fff;font-size:20px;overflow-x:hidden}.free-banner{display:flex;text-align:center;align-items:center;justify-content:center}.free-border{border-radius:12px;border:2px solid #71c929;color:#71c929;width:250px;height:50px;vertical-align:middle;text-align:center}h1,h2,h3,h4{letter-spacing:.02em;margin-block-start:.2em;margin-block-end:.2em}h1{font-size:54px;font-weight:400}h2{font-size:40px;font-weight:400}h3{font-size:32px;font-weight:400}h4{font-size:24px;font-weight:300;line-height:48px}a,button{cursor:pointer}.button{font-style:normal;font-weight:500;line-height:normal;font-size:22px;letter-spacing:.04em;border-radius:25px;padding:.3em 1em;color:#fff;background:#e1a34e;text-decoration:none;display:inline-block}.button>span{white-space:nowrap}@media screen and (max-width:576px){.button{font-size:20px}}.container{max-width:1440px;margin:0 auto}.section{min-height:100vh;padding-left:80px;padding-right:80px;margin-bottom:40px;padding-top:3em}@media screen and (max-width:576px){.section{padding-left:24px;padding-right:24px}}.flex-wrapper{display:flex;flex-wrap:wrap}.left-side,.right-side{width:50%}.text-center{text-align:center}.row{width:100%}.justify-content-center{justify-content:center!important}.justify-content-around{justify-content:space-around}.flex-column{flex-direction:column}#copyright{padding:1.5em 0}.display-inline-block{display:inline-block}.mt-0{margin-top:0}.mt-1{margin-top:.5rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:1rem}.mt-4{margin-top:1.5rem}.mt-4{margin-top:3rem!important}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.5rem}.ml-2{margin-left:.5rem}.ml-3{margin-left:1rem}.ml-4{margin-left:1.5rem}.ml-5{margin-left:3rem}.position-relative{position:relative}.position-absolute{position:absolute}.section-title{background-size:cover;background-image:url(/assets/images/paper_board_edit.png);width:416px;height:126px;padding-top:80px;text-align:center;font-size:2.5em}.top-left{position:fixed;top:20;right:0;z-index:490}@media screen and (max-width:576px){.mobile-fullwidth{flex:0 0 100%;width:100%}.mobile-hide{display:none!important}.section-title{width:270px;height:90px;padding-top:46px;font-size:1.7em}.mx-mobile-auto{margin-left:auto;margin-right:auto}.justify-content-mobile-start{justify-content:flex-start!important}.top-left img{width:130px}}@media screen and (max-width:800px){.tablet-fullwidth{flex:0 0 100%;width:100%}.mx-tablet-auto{margin-left:auto;margin-right:auto}}@media screen and (min-width:576px){.tablet-hide{display:none}}.image-fluid{width:100%}.full-height{height:100%}#about,#faq,#major,#timeline{padding-top:3rem}.logo{width:260px}.mock{opacity:.4;background-color:rgba(255,0,0,.5)}.min-height-0{min-height:0}.radius-50{border-radius:50px}.margin-y-2-em{margin:2em 0}.min-height-auto{min-height:auto}
+      body {
+        margin: 0;
+        background-color: #222542;
+        background-image: url(/assets/images/bgjwc.svg);
+        background-size: cover;
+        background-position: top center;
+        font-family: Pridi, serif, Tahoma;
+        color: #fff;
+        font-size: 20px;
+        overflow-x: hidden;
+      }
+      .free-banner {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+      .free-border {
+        border-radius: 12px;
+        border: 2px solid #71c929;
+        color: #71c929;
+        width: 250px;
+        height: 50px;
+        vertical-align: middle;
+        text-align: center;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        letter-spacing: 0.02em;
+        margin-block-start: 0.2em;
+        margin-block-end: 0.2em;
+      }
+      h1 {
+        font-size: 54px;
+        font-weight: 400;
+      }
+      h2 {
+        font-size: 40px;
+        font-weight: 400;
+      }
+      h3 {
+        font-size: 32px;
+        font-weight: 400;
+      }
+      h4 {
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 48px;
+      }
+      a,
+      button {
+        cursor: pointer;
+      }
+      .button {
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        font-size: 22px;
+        letter-spacing: 0.04em;
+        border-radius: 25px;
+        padding: 0.3em 1em;
+        color: #fff;
+        background: #e1a34e;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .button > span {
+        white-space: nowrap;
+      }
+      @media screen and (max-width: 576px) {
+        .button {
+          font-size: 20px;
+        }
+      }
+      .container {
+        max-width: 1440px;
+        margin: 0 auto;
+      }
+      .section {
+        min-height: 100vh;
+        padding-left: 80px;
+        padding-right: 80px;
+        margin-bottom: 40px;
+        padding-top: 3em;
+      }
+      @media screen and (max-width: 576px) {
+        .section {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
+      }
+      .flex-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .left-side,
+      .right-side {
+        width: 50%;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .row {
+        width: 100%;
+      }
+      .justify-content-center {
+        justify-content: center !important;
+      }
+      .justify-content-around {
+        justify-content: space-around;
+      }
+      .flex-column {
+        flex-direction: column;
+      }
+      #copyright {
+        padding: 1.5em 0;
+      }
+      .display-inline-block {
+        display: inline-block;
+      }
+      .mt-0 {
+        margin-top: 0;
+      }
+      .mt-1 {
+        margin-top: 0.5rem;
+      }
+      .mt-2 {
+        margin-top: 0.5rem;
+      }
+      .mt-3 {
+        margin-top: 1rem;
+      }
+      .mt-4 {
+        margin-top: 1.5rem;
+      }
+      .mt-4 {
+        margin-top: 3rem !important;
+      }
+      .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .ml-1 {
+        margin-left: 0.5rem;
+      }
+      .ml-2 {
+        margin-left: 0.5rem;
+      }
+      .ml-3 {
+        margin-left: 1rem;
+      }
+      .ml-4 {
+        margin-left: 1.5rem;
+      }
+      .ml-5 {
+        margin-left: 3rem;
+      }
+      .position-relative {
+        position: relative;
+      }
+      .position-absolute {
+        position: absolute;
+      }
+      .section-title {
+        background-size: cover;
+        background-image: url(/assets/images/paper_board_edit.png);
+        width: 416px;
+        height: 126px;
+        padding-top: 80px;
+        text-align: center;
+        font-size: 2.5em;
+      }
+      .top-left {
+        position: fixed;
+        top: 20;
+        right: 0;
+        z-index: 490;
+      }
+      @media screen and (max-width: 576px) {
+        .mobile-fullwidth {
+          flex: 0 0 100%;
+          width: 100%;
+        }
+        .mobile-hide {
+          display: none !important;
+        }
+        .section-title {
+          width: 270px;
+          height: 90px;
+          padding-top: 46px;
+          font-size: 1.7em;
+        }
+        .mx-mobile-auto {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .justify-content-mobile-start {
+          justify-content: flex-start !important;
+        }
+        .top-left img {
+          width: 130px;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        .tablet-fullwidth {
+          flex: 0 0 100%;
+          width: 100%;
+        }
+        .mx-tablet-auto {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      @media screen and (min-width: 576px) {
+        .tablet-hide {
+          display: none;
+        }
+      }
+      .image-fluid {
+        width: 100%;
+      }
+      .full-height {
+        height: 100%;
+      }
+      #about,
+      #faq,
+      #major,
+      #timeline {
+        padding-top: 3rem;
+      }
+      .logo {
+        width: 260px;
+      }
+      .mock {
+        opacity: 0.4;
+        background-color: rgba(255, 0, 0, 0.5);
+      }
+      .min-height-0 {
+        min-height: 0;
+      }
+      .radius-50 {
+        border-radius: 50px;
+      }
+      .margin-y-2-em {
+        margin: 2em 0;
+      }
+      .min-height-auto {
+        min-height: auto;
+      }
     </style>
     <link rel="preload" href="/assets/css/about.min.css" as="style" />
     <link rel="preload" href="/assets/css/branch.min.css" as="style" />
@@ -146,17 +441,25 @@
     <link rel="stylesheet" href="/assets/css/navbar.min.css" />
     <link rel="stylesheet" href="/assets/css/modal.min.css" />
 
-    <link rel="preload" href="/assets/js/script.min.js" as="script">
-    <link rel="preload" href="/assets/js/polyfill.min.js" as="script">
+    <link rel="preload" href="/assets/js/script.min.js" as="script" />
+    <link rel="preload" href="/assets/js/polyfill.min.js" as="script" />
     <script src="/assets/js/polyfill.min.js"></script>
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" as="style" />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css"
+      as="style"
+    />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css"
       rel="stylesheet"
     />
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/vanilla-lazyload@11.0.2/dist/lazyload.min.js" as="script">
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/vanilla-lazyload@11.0.2/dist/lazyload.min.js"
+      as="script"
+    />
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@11.0.2/dist/lazyload.min.js"></script>
-    <link rel="preload" href="/assets/images/paper_board_edit.png" as="image">
+    <link rel="preload" href="/assets/images/paper_board_edit.png" as="image" />
     <script type="text/javascript">
       // automate redirect to https
       if (
@@ -503,11 +806,11 @@
           <button id="major-right" class="button-next tablet-hide"></button>
         </div>
 
-        <!-- <div class="text-center mt-4">
+        <div class="text-center mt-4">
           <a
             href="https://www.jwc.in.th/candidate"
             class="button radius-50 animated pulse infinite box-shadow"
-            >
+          >
             <!-- <span>
               สมัครเข้าค่าย JWC
             </span>
@@ -519,7 +822,7 @@
             </span> -->
             <span>ประกาศผลการคัดเลือก</span>
           </a>
-        </div> -->
+        </div>
       </div>
     </section>
 
@@ -848,12 +1151,20 @@
             </a>
             <a href="https://www.cpall.co.th/" target="_blank">
               <div class="vertical-center">
-                <img data-src="/assets/images/sponsors/SuperVIP/cpall.jpg" alt="cpall" class="lazy" />
+                <img
+                  data-src="/assets/images/sponsors/SuperVIP/cpall.jpg"
+                  alt="cpall"
+                  class="lazy"
+                />
               </div>
             </a>
             <a href="https://www.pim.ac.th/" target="_blank" class="">
               <div class="vertical-center">
-                <img data-src="/assets/images/sponsors/SuperVIP/pim.jpg" alt="pim" class="lazy" />
+                <img
+                  data-src="/assets/images/sponsors/SuperVIP/pim.jpg"
+                  alt="pim"
+                  class="lazy"
+                />
               </div>
             </a>
           </div>
@@ -870,17 +1181,29 @@
             </a>
             <a href="http://www.iadth.com/" target="_blank">
               <div class="vertical-center">
-                <img data-src="/assets/images/sponsors/vip/iad.png" alt="iad" class="lazy" />
+                <img
+                  data-src="/assets/images/sponsors/vip/iad.png"
+                  alt="iad"
+                  class="lazy"
+                />
               </div>
             </a>
             <a href="https://www.dek-d.com/" target="_blank">
               <div class="vertical-center">
-                <img data-src="/assets/images/sponsors/vip/dek-d.png" alt="dek-d" class="lazy" />
+                <img
+                  data-src="/assets/images/sponsors/vip/dek-d.png"
+                  alt="dek-d"
+                  class="lazy"
+                />
               </div>
             </a>
             <a href="https://www.somjai.co.th/" target="_blank">
               <div class="vertical-center">
-                <img data-src="/assets/images/sponsors/vip/somjai.png" alt="somjai" class="lazy" />
+                <img
+                  data-src="/assets/images/sponsors/vip/somjai.png"
+                  alt="somjai"
+                  class="lazy"
+                />
               </div>
             </a>
           </div>
@@ -925,7 +1248,10 @@
               style="flex: 0 0 24%;"
             >
               <div class="vertical-center">
-                <img src="/assets/images/sponsors/platinum/Tumtook.jpg" alt="" />
+                <img
+                  src="/assets/images/sponsors/platinum/Tumtook.jpg"
+                  alt=""
+                />
               </div>
             </a>
           </div>
@@ -934,38 +1260,84 @@
             class="flex-between image-fluid-inside gold justify-content-center"
           >
             <a
-              href="https://www.vronline.in.th/"
-              style="flex: 0 0 25%;"
+              href="https://www.camphub.in.th/"
+              style="flex: 0 0 15%;"
               target="_blank"
             >
               <div class="vertical-center">
-                <img data-src="/assets/images/sponsors/gold/VRONLINE.png" alt="VR Online" class="lazy" />
+                <img
+                  data-src="/assets/images/sponsors/gold/camphub.png"
+                  alt="Camphub"
+                  class="lazy"
+                />
+              </div>
+            </a>
+            <a
+              href="https://www.uppercuz.com/"
+              style="flex: 0 0 18%;transform:translateY(5%);"
+              target="_blank"
+            >
+              <div class="vertical-center">
+                <img
+                  data-src="/assets/images/sponsors/gold/uppercuz.png"
+                  alt="Uppercuz"
+                  class="lazy"
+                />
+              </div>
+            </a>
+            <a
+              href="https://www.vronline.in.th/"
+              style="flex: 0 0 20%;"
+              target="_blank"
+            >
+              <div class="vertical-center">
+                <img
+                  data-src="/assets/images/sponsors/gold/VRONLINE.png"
+                  alt="VR Online"
+                  class="lazy"
+                />
               </div>
             </a>
             <a
               href="https://pantip.com/"
-              style="flex: 0 0 18%;"
+              style="flex: 0 0 16%;"
               target="_blank"
             >
               <div class="vertical-center">
-                <img data-src="/assets/images/sponsors/gold/Pantip.png" alt="pantip" class="lazy" />
+                <img
+                  data-src="/assets/images/sponsors/gold/Pantip.png"
+                  alt="pantip"
+                  class="lazy"
+                />
               </div>
             </a>
           </div>
           <div class="flex-between image-fluid-inside silver">
             <a href="https://www.lnwshop.com/" target="_blank">
               <div class="vertical-center">
-                <img data-src="/assets/images/sponsors/silver/Lnw.png" alt="Lnw" class="lazy" />
+                <img
+                  data-src="/assets/images/sponsors/silver/Lnw.png"
+                  alt="Lnw"
+                  class="lazy"
+                />
               </div>
             </a>
             <a href="https://www.pathosting.co.th/" target="_blank">
               <div class="vertical-center">
-                <img data-src="/assets/images/sponsors/silver/pt.jpg" alt="pt" class="lazy" />
+                <img
+                  data-src="/assets/images/sponsors/silver/pt.jpg"
+                  alt="pt"
+                  class="lazy"
+                />
               </div>
             </a>
             <a href="https://www.iurban.in.th/" class="iurban" target="_blank">
               <div class="vertical-center">
-                <img data-src="/assets/images/sponsors/silver/iUrban.png" alt="iUrban" class="lazy" />
+                <img
+                  data-src="/assets/images/sponsors/silver/iUrban.png"
+                  alt="iUrban"
+                  class="lazy"
+                />
               </div>
             </a>
             <a href="http://www.witty.co.th/" target="_blank">
@@ -981,20 +1353,32 @@
           <div class="flex-between image-fluid-inside silver">
             <a href="https://spaceth.co/" target="_blank">
               <div class="vertical-center">
-                <img data-src="/assets/images/sponsors/silver/spaceth.png" alt="spaceth" class="lazy" />
+                <img
+                  data-src="/assets/images/sponsors/silver/spaceth.png"
+                  alt="spaceth"
+                  class="lazy"
+                />
               </div>
             </a>
             <a href="https://www.mangozero.com" target="_blank">
               <div class="vertical-center">
-                <img data-src="/assets/images/sponsors/silver/mango.jpg" alt="mango" class="lazy" />
+                <img
+                  data-src="/assets/images/sponsors/silver/mango.jpg"
+                  alt="mango"
+                  class="lazy"
+                />
               </div>
             </a>
             <a href="https://www.livingsoft.co.th/" target="_blank">
               <div class="vertical-center">
-                <img data-src="/assets/images/sponsors/silver/living.jpg" alt="living" class="lazy" style="transform: scale(0.9) translateY(-5%);" />
+                <img
+                  data-src="/assets/images/sponsors/silver/living.jpg"
+                  alt="living"
+                  class="lazy"
+                  style="transform: scale(0.9) translateY(-5%);"
+                />
               </div>
             </a>
-            
           </div>
           <hr class="sponsor-seperator" />
           <h3 class="media-partner-title">Media Partner</h3>
@@ -1461,8 +1845,16 @@
         </div>
         <div class="flex-wrapper flex-column">
           <div class="camp-creator">
-            <img data-src="/logo/ywc16.svg" alt="ywc16" class="creator-image lazy" />
-            <img data-src="/logo/TWA-logo-02.svg" alt="twa" class="creator-image lazy" />
+            <img
+              data-src="/logo/ywc16.svg"
+              alt="ywc16"
+              class="creator-image lazy"
+            />
+            <img
+              data-src="/logo/TWA-logo-02.svg"
+              alt="twa"
+              class="creator-image lazy"
+            />
           </div>
         </div>
       </div>
